@@ -1,0 +1,16 @@
+/* Custom CSS for Footer component */
+
+.footer-container {
+  background-color: #B8CFE2;
+}
+
+.footer-back-to-top-btn {
+  background-color: #FF6534;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-back-to-top-btn:hover {
+  background-color: #e55527;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 101, 52, 0.35);
+}

@@ -1,0 +1,23 @@
+/* Custom styles for Why iSmash section */
+
+.why-ismash-container {
+  background-color: #FFF5F2;
+}
+
+.why-ismash-klarna-box {
+  border-color: #E2E8F0;
+  transition: all 0.25s ease-in-out;
+}
+
+.why-ismash-klarna-box:hover {
+  border-color: #FF6534;
+  box-shadow: 0 4px 16px rgba(255, 101, 52, 0.12);
+}
+
+.why-ismash-icon-wrapper {
+  transition: transform 0.25s ease;
+}
+
+.why-ismash-icon-wrapper:hover {
+  transform: translateY(-3px) scale(1.05);
+}

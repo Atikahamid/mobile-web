@@ -1,0 +1,109 @@
+import React from 'react';
+import './Footer.css';
+
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  return (
+    <footer className="footer-container text-[#1C0D2A] py-10 sm:py-12 px-6 sm:px-10 lg:px-16 font-sans relative">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Top Grid: Links and Copyright */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 items-start">
+          
+          {/* Item 1: Copyright */}
+          <div>
+            <h4 className="font-extrabold text-base sm:text-lg text-[#1C0D2A] leading-snug">
+              Copyright © 2026 All rights<br />reserved
+            </h4>
+          </div>
+
+          {/* Item 2: Terms & Conditions */}
+          <div>
+            <a
+              href="#terms-and-conditions"
+              className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
+            >
+              Terms & Conditions
+            </a>
+          </div>
+
+          {/* Item 3: Privacy Notice */}
+          <div>
+            <a
+              href="#privacy-notice"
+              className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
+            >
+              Privacy Notice
+            </a>
+          </div>
+
+          {/* Item 4: Cookie Settings & Cookie Policy */}
+          <div>
+            <div className="flex flex-col space-y-1">
+              <a
+                href="#cookie-settings"
+                className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
+              >
+                Cookie Settings
+              </a>
+              <a
+                href="#cookie-policy"
+                className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
+              >
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom Section: Company Registration Info & Back To Top Button */}
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-4">
+          
+          {/* Company Registration & Address Details */}
+          <div className="text-xs sm:text-sm text-[#352545] leading-relaxed max-w-3xl font-medium">
+            <p>
+              iSmash (UK) Trading Limited registered in England and Wales under the company registration number 09347098
+            </p>
+            <p className="mt-0.5">
+              Registered office address: Holborn Gate, 330 High Holborn, London, England, WC1V 7PP
+            </p>
+          </div>
+
+          {/* Back to Top Square Button (Orange-Red #FF6534) */}
+          <div className="flex-shrink-0 self-end">
+            <button
+              onClick={scrollToTop}
+              aria-label="Scroll back to top"
+              className="footer-back-to-top-btn w-12 h-12 rounded-sm flex items-center justify-center text-white cursor-pointer shadow-sm focus:outline-none"
+            >
+              <svg
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M5 15l7-7 7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
