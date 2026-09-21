@@ -110,7 +110,7 @@ const DevicesBrands = () => {
 
                 <div>
                   {/* Stats Box (Lessons / Duration style from Image 2) */}
-                  <div className="bg-[#F8F9FA] rounded-2xl p-3.5 my-4 flex items-center justify-around text-xs text-[#555062] font-medium border border-gray-100">
+                  {/* <div className="bg-[#F8F9FA] rounded-2xl p-3.5 my-4 flex items-center justify-around text-xs text-[#555062] font-medium border border-gray-100">
                     <div className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-[#FF6534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -132,7 +132,7 @@ const DevicesBrands = () => {
                         <span className="font-bold text-[#1F1B2E]">{device.warranty}</span>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Card Action Button */}
                   <a

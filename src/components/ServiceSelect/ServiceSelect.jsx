@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ServiceSelect.css';
 
 const ServiceSelect = () => {
@@ -10,7 +11,7 @@ const ServiceSelect = () => {
       titleColor: 'text-[#1F1B2E]',
       shadowClass: 'shadow-[0_12px_32px_rgba(0,0,0,0.06)]',
       buttonText: 'Book Now',
-      buttonHref: '#book-repair',
+      buttonHref: '/pages/repairs',
       icon: (
         <svg width="92" height="92" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -28,7 +29,7 @@ const ServiceSelect = () => {
       titleColor: 'text-[#1F1B2E]',
       shadowClass: 'shadow-[0_12px_32px_rgba(0,0,0,0.06)]',
       buttonText: 'Learn More',
-      buttonHref: '#replace',
+      buttonHref: '/collections/refurbished',
       icon: (
         <svg width="92" height="92" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Dark Navy Diagonal Bar (Top-Left to Bottom-Right) */}
@@ -97,12 +98,12 @@ const ServiceSelect = () => {
               </h3>
 
               {/* Overlapping Pill Button at Bottom */}
-              <a
-                href={item.buttonHref}
+              <Link
+                to={item.buttonHref}
                 className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#FF6534] hover:bg-[#e05020] text-white font-bold text-sm sm:text-base px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 whitespace-nowrap cursor-pointer z-10"
               >
                 {item.buttonText}
-              </a>
+              </Link>
             </div>
           ))}
         </div>

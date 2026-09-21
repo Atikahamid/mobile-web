@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, ShoppingBag, User, Menu, X } from 'lucide-react';
 import RepairsMegaMenu from './RepairsMegaMenu';
 import StoreLocatorMegaMenu from './StoreLocatorMegaMenu';
 import AboutUsDropdown from './AboutUsDropdown';
+import { useCart } from '../../context/CartContext';
 import './Header.css';
 
 const Header = () => {
@@ -12,10 +14,12 @@ const Header = () => {
   const [isStoreLocatorHovered, setIsStoreLocatorHovered] = useState(false);
   const [isAboutUsHovered, setIsAboutUsHovered] = useState(false);
 
+  const { cartCount } = useCart();
+
   const navLinks = [
-    { title: 'Repairs & Servicing', href: '#repairs' },
+    { title: 'Repairs & Servicing', href: '/pages/repairs' },
     { title: 'Store Locator', href: '#stores' },
-    { title: 'Refurbished Devices', href: '#devices' },
+    { title: 'Refurbished Devices', href: '/collections/refurbished' },
     { title: 'About Us', href: '#about' },
     { title: 'Join Our Team', href: '#careers' },
   ];
@@ -148,16 +152,16 @@ const Header = () => {
             </div>
 
             {/* Shopping Cart Icon */}
-            <a
-              href="#cart"
+            <Link
+              to="/cart"
               className="relative p-2 text-[#282338] hover:text-[#FF6534] transition-colors duration-150 flex items-center justify-center"
               aria-label="Shopping Cart"
             >
               <ShoppingBag className="w-6 h-6 stroke-[1.8]" />
-              <span className="absolute -top-0.5 -right-0.5 bg-[#FF6534] text-white text-[11px] font-bold rounded-full w-4 h-4 flex items-center justify-center shadow-xs">
-                0
+              <span className="absolute -top-0.5 -right-0.5 bg-[#FF6534] text-white text-[11px] font-bold rounded-full min-w-[18px] h-4 px-1 flex items-center justify-center shadow-xs">
+                {cartCount}
               </span>
-            </a>
+            </Link>
 
             {/* User Account Icon */}
             <a
@@ -171,16 +175,16 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-3">
-            <a
-              href="#cart"
+            <Link
+              to="/cart"
               className="relative p-1.5 text-[#282338]"
               aria-label="Cart"
             >
               <ShoppingBag className="w-6 h-6" />
-              <span className="absolute top-0 right-0 bg-[#FF6534] text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                0
+              <span className="absolute top-0 right-0 bg-[#FF6534] text-white text-[10px] font-bold rounded-full min-w-[16px] h-4 px-1 flex items-center justify-center">
+                {cartCount}
               </span>
-            </a>
+            </Link>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-[#282338] hover:text-[#FF6534] focus:outline-none"

@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Footer.css';
 
 const Footer = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    // Check scroll position on mount
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -63,7 +81,7 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Section: Company Registration Info & Back To Top Button */}
+        {/* Bottom Section: Company Registration Info */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-4">
           
           {/* Company Registration & Address Details */}
@@ -76,32 +94,32 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Back to Top Square Button (Orange-Red #FF6534) */}
-          <div className="flex-shrink-0 self-end">
-            <button
-              onClick={scrollToTop}
-              aria-label="Scroll back to top"
-              className="footer-back-to-top-btn w-12 h-12 rounded-sm flex items-center justify-center text-white cursor-pointer shadow-sm focus:outline-none"
-            >
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  d="M5 15l7-7 7 7"
-                />
-              </svg>
-            </button>
-          </div>
-
         </div>
 
       </div>
+
+      {/* Floating Back to Top Square Button (Fixed at Bottom Right of Screen) */}
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll back to top"
+        className={`floating-scroll-top-btn fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 rounded-sm flex items-center justify-center text-white cursor-pointer shadow-lg z-50 transition-all duration-300 ${
+          showScrollTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+        }`}
+      >
+        <svg
+          className="w-5 h-5 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="3"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </button>
     </footer>
   );
 };

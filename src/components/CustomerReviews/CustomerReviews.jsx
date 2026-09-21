@@ -217,7 +217,7 @@ const CustomerReviews = () => {
         <div className="flex justify-center pt-2">
           <a
             href="#stores"
-            className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-[#1F1B2E] font-bold text-sm sm:text-base px-8 py-3.5 rounded-full border border-gray-200/90 shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 group cursor-pointer"
+            className="inline-flex items-center gap-2 bg-white hover:bg-[#FF6534] text-[#1F1B2E] font-bold text-sm sm:text-base px-8 py-3.5 rounded-full border border-gray-200/90 shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 group cursor-pointer"
           >
             <span>Find your nearest iSmash store</span>
             <svg

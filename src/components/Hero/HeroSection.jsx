@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import heroImage from '../../assets/images/ismash-hero.png';
 import './HeroSection.css';
 
@@ -41,12 +42,12 @@ const HeroSection = () => {
 
             {/* Call to Action Button */}
             <div className="pt-1">
-              <a
-                href="#book-repair"
+              <Link
+                to="/pages/repairs"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-[#FF6534] hover:bg-[#e05020] text-white font-bold text-lg rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 Book a repair
-              </a>
+              </Link>
             </div>
 
           </div>

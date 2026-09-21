@@ -1,9 +1,15 @@
 import React from 'react';
-import Home from './pages/Home/Home';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
-    <Home />
+    <CartProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

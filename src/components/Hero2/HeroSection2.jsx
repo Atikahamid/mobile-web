@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import hero2Image from '../../assets/images/ismash-hero2.png';
 import './HeroSection2.css';
 
@@ -13,12 +14,6 @@ const HeroSection2 = () => {
           {/* Left Column: Photo Card with Overlay Text */}
           <div className="lg:col-span-6 flex flex-col items-start lg:items-end">
             <div className="w-full max-w-[270px]">
-              {/* <div className="mb-1 lg:mb-2 text-left">
-                <span className="font-caveat text-4xl sm:text-5xl lg:text-6xl text-[#FF6534] font-bold tracking-wide italic">
-                  Fancy a
-                </span>
-              </div> */}
-
               <div className="relative aspect-square w-full bg-[#ea4139] rounded-xl overflow-visible shadow-2xl group border-2 border-white/10">
 
                 {/* Image Container */}
@@ -53,12 +48,12 @@ const HeroSection2 = () => {
             </h2>
 
             <div className="pt-2">
-              <a
-                href="#view-phones"
+              <Link
+                to="/collections/refurbished"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-[#FF6534] hover:bg-[#e05020] text-white font-bold text-lg rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 View phones
-              </a>
+              </Link>
             </div>
           </div>
 
