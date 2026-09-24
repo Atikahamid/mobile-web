@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import AboutSection from '../../components/AboutSection/AboutSection';
@@ -19,7 +20,7 @@ const SelectDeviceType = () => {
       badge: 'Most Popular',
       price: 'From £29',
       buttonText: 'Book Smartphone Repair',
-      href: '#smartphone-repairs',
+      href: '/pages/mobile-repairs',
     },
     {
       id: 'ipad',
@@ -94,15 +95,27 @@ const SelectDeviceType = () => {
 
                 {/* Action Button */}
                 <div>
-                  <a
-                    href={device.href}
-                    className="w-full py-3.5 rounded-xl bg-white border-2 border-[#FF6534] text-[#FF6534] font-bold text-sm sm:text-base hover:bg-[#FF6534] hover:text-white transition-all duration-200 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>{device.buttonText}</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                  {device.href.startsWith('/') ? (
+                    <Link
+                      to={device.href}
+                      className="w-full py-3.5 rounded-xl bg-white border-2 border-[#FF6534] text-[#FF6534] font-bold text-sm sm:text-base hover:bg-[#FF6534] hover:text-white transition-all duration-200 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>{device.buttonText}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
+                  ) : (
+                    <a
+                      href={device.href}
+                      className="w-full py-3.5 rounded-xl bg-white border-2 border-[#FF6534] text-[#FF6534] font-bold text-sm sm:text-base hover:bg-[#FF6534] hover:text-white transition-all duration-200 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>{device.buttonText}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
 

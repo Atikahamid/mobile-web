@@ -5,6 +5,11 @@ import RefurbishedDevices from '../pages/RefurbishedDevices/RefurbishedDevices';
 import RefurbishedProductDetail from '../pages/RefurbishedDevices/RefurbishedProductDetail';
 import CartPage from '../pages/Cart/CartPage';
 import SelectDeviceType from '../pages/SelectDeviceType/SelectDeviceType';
+import MobileRepairs from '../pages/MobileRepairs/MobileRepairs';
+import ProtectionProduct from '../pages/ProtectionProduct/ProtectionProduct';
+import AppleRepairs from '../pages/AppleRepairs/AppleRepairs';
+import SamsungRepairs from '../pages/SamsungRepairs/SamsungRepairs';
+import SelectRepairScreen from '../pages/SelectRepairScreen/SelectRepairScreen';
 
 /**
  * AppRoutes Component
@@ -31,6 +36,32 @@ const AppRoutes = () => {
       <Route path="/pages/repairs" element={<SelectDeviceType />} />
       <Route path="/repairs" element={<SelectDeviceType />} />
       <Route path="/select-device" element={<SelectDeviceType />} />
+
+      {/* Mobile Repairs Routes */}
+      <Route path="/pages/mobile-repairs" element={<MobileRepairs />} />
+      <Route path="/mobile-repairs" element={<MobileRepairs />} />
+
+      {/* Apple Repairs Routes */}
+      <Route path="/pages/repairs/apple" element={<AppleRepairs />} />
+      <Route path="/repairs/apple" element={<AppleRepairs />} />
+      <Route path="/apple-repairs" element={<AppleRepairs />} />
+
+      {/* Samsung Repairs Routes */}
+      <Route path="/pages/repairs/samsung" element={<SamsungRepairs />} />
+      <Route path="/repairs/samsung" element={<SamsungRepairs />} />
+      <Route path="/samsung-repairs" element={<SamsungRepairs />} />
+
+      {/* Select Repair Routes (Model specific) */}
+      <Route path="/pages/repairs/apple/:modelId" element={<SelectRepairScreen />} />
+      <Route path="/pages/repairs/select-repair" element={<SelectRepairScreen />} />
+      <Route path="/pages/repairs/select-repair/:modelId" element={<SelectRepairScreen />} />
+      <Route path="/select-repair/:modelId" element={<SelectRepairScreen />} />
+      <Route path="/select-repair" element={<SelectRepairScreen />} />
+
+      {/* Protection Product Routes */}
+      <Route path="/pages/protection-product" element={<ProtectionProduct />} />
+      <Route path="/protection-product" element={<ProtectionProduct />} />
+      <Route path="/protection" element={<ProtectionProduct />} />
 
       {/* Fallback Redirect Route */}
       <Route path="*" element={<Navigate to="/" replace />} />

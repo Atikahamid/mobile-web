@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './RepairsMegaMenu.css';
 
 const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
@@ -8,7 +9,7 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {/* Container with rounded corners (no sharp edges) and shadow */}
+      {/* Container with rounded corners and shadow */}
       <div className="repairs-megamenu-container overflow-hidden bg-white">
         
         {/* Top Accent Bar in #FF6534 */}
@@ -43,25 +44,25 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                     {/* Left iPhone Column */}
                     <div className="space-y-2">
-                      <a href="#iphone-17-pro-max" className="block repairs-megamenu-link">iPhone 17 Pro Max</a>
-                      <a href="#iphone-17-pro" className="block repairs-megamenu-link">iPhone 17 Pro</a>
-                      <a href="#iphone-17" className="block repairs-megamenu-link">iPhone 17</a>
-                      <a href="#iphone-15-pro-max" className="block repairs-megamenu-link">iPhone 15 Pro Max</a>
-                      <a href="#iphone-15" className="block repairs-megamenu-link">iPhone 15</a>
-                      <a href="#iphone-13" className="block repairs-megamenu-link">iPhone 13</a>
-                      <a href="#iphone-11" className="block repairs-megamenu-link">iPhone 11</a>
-                      <a href="#iphone-se" className="block repairs-megamenu-link">iPhone SE</a>
+                      <Link to="/pages/repairs/apple/iphone-17-pro-max" className="block repairs-megamenu-link">iPhone 17 Pro Max</Link>
+                      <Link to="/pages/repairs/apple/iphone-17-pro" className="block repairs-megamenu-link">iPhone 17 Pro</Link>
+                      <Link to="/pages/repairs/apple/iphone-17" className="block repairs-megamenu-link">iPhone 17</Link>
+                      <Link to="/pages/repairs/apple/iphone-15-pro-max" className="block repairs-megamenu-link">iPhone 15 Pro Max</Link>
+                      <Link to="/pages/repairs/apple/iphone-15" className="block repairs-megamenu-link">iPhone 15</Link>
+                      <Link to="/pages/repairs/apple/iphone-13" className="block repairs-megamenu-link">iPhone 13</Link>
+                      <Link to="/pages/repairs/apple/iphone-11" className="block repairs-megamenu-link">iPhone 11</Link>
+                      <Link to="/pages/repairs/apple/iphone-se" className="block repairs-megamenu-link">iPhone SE</Link>
                     </div>
                     {/* Right iPhone Column */}
                     <div className="space-y-2">
-                      <a href="#iphone-16-pro-max" className="block repairs-megamenu-link">iPhone 16 Pro Max</a>
-                      <a href="#iphone-16-pro" className="block repairs-megamenu-link">iPhone 16 Pro</a>
-                      <a href="#iphone-16" className="block repairs-megamenu-link">iPhone 16</a>
-                      <a href="#iphone-15-pro" className="block repairs-megamenu-link">iPhone 15 Pro</a>
-                      <a href="#iphone-14" className="block repairs-megamenu-link">iPhone 14</a>
-                      <a href="#iphone-12" className="block repairs-megamenu-link">iPhone 12</a>
-                      <a href="#iphone-xr" className="block repairs-megamenu-link">iPhone XR</a>
-                      <a href="#see-all-iphone" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All iPhone</a>
+                      <Link to="/pages/repairs/apple/iphone-16-pro-max" className="block repairs-megamenu-link">iPhone 16 Pro Max</Link>
+                      <Link to="/pages/repairs/apple/iphone-16-pro" className="block repairs-megamenu-link">iPhone 16 Pro</Link>
+                      <Link to="/pages/repairs/apple/iphone-16" className="block repairs-megamenu-link">iPhone 16</Link>
+                      <Link to="/pages/repairs/apple/iphone-15-pro" className="block repairs-megamenu-link">iPhone 15 Pro</Link>
+                      <Link to="/pages/repairs/apple/iphone-14" className="block repairs-megamenu-link">iPhone 14</Link>
+                      <Link to="/pages/repairs/apple/iphone-12" className="block repairs-megamenu-link">iPhone 12</Link>
+                      <Link to="/pages/repairs/apple/iphone-xr" className="block repairs-megamenu-link">iPhone XR</Link>
+                      <Link to="/pages/repairs/apple" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All iPhone</Link>
                     </div>
                   </div>
                 </div>
@@ -72,15 +73,15 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                     Samsung
                   </h4>
                   <div className="space-y-2">
-                    <a href="#galaxy-z-flip5" className="block repairs-megamenu-link">Galaxy Z Flip5</a>
-                    <a href="#galaxy-z-flip4" className="block repairs-megamenu-link">Galaxy Z Flip4</a>
-                    <a href="#galaxy-s24-ultra" className="block repairs-megamenu-link">Galaxy S24 Ultra</a>
-                    <a href="#galaxy-s23-ultra" className="block repairs-megamenu-link">Galaxy S23 Ultra</a>
-                    <a href="#galaxy-s22-ultra" className="block repairs-megamenu-link">Galaxy S22 Ultra</a>
-                    <a href="#galaxy-s21-ultra" className="block repairs-megamenu-link">Galaxy S21 Ultra</a>
-                    <a href="#galaxy-a54" className="block repairs-megamenu-link">Galaxy A54</a>
-                    <a href="#galaxy-a52s" className="block repairs-megamenu-link">Galaxy A52s</a>
-                    <a href="#see-all-samsung" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All Samsung</a>
+                    <Link to="/pages/repairs/select-repair/z-flip-5" className="block repairs-megamenu-link">Galaxy Z Flip5</Link>
+                    <Link to="/pages/repairs/select-repair/z-flip-4" className="block repairs-megamenu-link">Galaxy Z Flip4</Link>
+                    <Link to="/pages/repairs/select-repair/s24-ultra" className="block repairs-megamenu-link">Galaxy S24 Ultra</Link>
+                    <Link to="/pages/repairs/select-repair/s23-ultra" className="block repairs-megamenu-link">Galaxy S23 Ultra</Link>
+                    <Link to="/pages/repairs/select-repair/s22-ultra" className="block repairs-megamenu-link">Galaxy S22 Ultra</Link>
+                    <Link to="/pages/repairs/select-repair/s21-ultra" className="block repairs-megamenu-link">Galaxy S21 Ultra</Link>
+                    <Link to="/pages/repairs/select-repair/a54-5g" className="block repairs-megamenu-link">Galaxy A54</Link>
+                    <Link to="/pages/repairs/select-repair/a52s-5g" className="block repairs-megamenu-link">Galaxy A52s</Link>
+                    <Link to="/pages/repairs/samsung" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All Samsung</Link>
                   </div>
                 </div>
 
@@ -90,17 +91,17 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                     Google
                   </h4>
                   <div className="space-y-2">
-                    <a href="#pixel-11-pro-xl" className="block repairs-megamenu-link">Pixel 11 Pro XL</a>
-                    <a href="#pixel-11-pro" className="block repairs-megamenu-link">Pixel 11 Pro</a>
-                    <a href="#pixel-11" className="block repairs-megamenu-link">Pixel 11</a>
-                    <a href="#pixel-10-pro-xl" className="block repairs-megamenu-link">Pixel 10 Pro XL</a>
-                    <a href="#pixel-10-pro" className="block repairs-megamenu-link">Pixel 10 Pro</a>
-                    <a href="#pixel-10" className="block repairs-megamenu-link">Pixel 10</a>
-                    <a href="#pixel-9" className="block repairs-megamenu-link">Pixel 9</a>
-                    <a href="#pixel-9a" className="block repairs-megamenu-link">Pixel 9a</a>
-                    <a href="#pixel-8" className="block repairs-megamenu-link">Pixel 8</a>
-                    <a href="#pixel-7" className="block repairs-megamenu-link">Pixel 7</a>
-                    <a href="#see-all-google" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All Google</a>
+                    <Link to="/pages/repairs/select-repair/pixel-11-pro-xl" className="block repairs-megamenu-link">Pixel 11 Pro XL</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-11-pro" className="block repairs-megamenu-link">Pixel 11 Pro</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-11" className="block repairs-megamenu-link">Pixel 11</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-10-pro-xl" className="block repairs-megamenu-link">Pixel 10 Pro XL</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-10-pro" className="block repairs-megamenu-link">Pixel 10 Pro</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-10" className="block repairs-megamenu-link">Pixel 10</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-9" className="block repairs-megamenu-link">Pixel 9</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-9a" className="block repairs-megamenu-link">Pixel 9a</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-8" className="block repairs-megamenu-link">Pixel 8</Link>
+                    <Link to="/pages/repairs/select-repair/pixel-7" className="block repairs-megamenu-link">Pixel 7</Link>
+                    <Link to="/pages/mobile-repairs" className="block repairs-megamenu-link text-[#FF6534] font-bold">See All Google</Link>
                   </div>
                 </div>
 
@@ -120,17 +121,17 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                 </h3>
               </div>
               <div className="space-y-2 pt-1">
-                <a href="#ipad-11th-gen" className="block repairs-megamenu-link">iPad 11th Gen</a>
-                <a href="#ipad-10th-gen" className="block repairs-megamenu-link">iPad 10th Gen</a>
-                <a href="#ipad-9th-gen" className="block repairs-megamenu-link">iPad 9th Gen</a>
-                <a href="#ipad-8th-gen" className="block repairs-megamenu-link">iPad 8th Gen</a>
-                <a href="#ipad-mini-7th-gen" className="block repairs-megamenu-link">iPad Mini 8.3" 7th Gen</a>
-                <a href="#ipad-air-4-5th-gen" className="block repairs-megamenu-link">iPad Air 10.9" 4th / 5th Gen</a>
-                <a href="#ipad-air-6-7th-gen" className="block repairs-megamenu-link">iPad Air 11" 6th / 7th Gen</a>
-                <a href="#ipad-pro-1-2nd-gen" className="block repairs-megamenu-link">iPad Pro 11" 1st / 2nd Gen</a>
-                <a href="#ipad-pro-3-4th-gen" className="block repairs-megamenu-link">iPad Pro 12.9" 3rd / 4th Gen</a>
-                <a href="#ipad-pro-5-6th-gen" className="block repairs-megamenu-link">iPad Pro 12.9" 5th / 6th Gen</a>
-                <a href="#see-all-ipad" className="block repairs-megamenu-link text-[#FF6534] font-bold pt-1">See all iPad</a>
+                <Link to="/pages/repairs/select-repair/ipad-11th-gen" className="block repairs-megamenu-link">iPad 11th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-10th-gen" className="block repairs-megamenu-link">iPad 10th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-9th-gen" className="block repairs-megamenu-link">iPad 9th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-8th-gen" className="block repairs-megamenu-link">iPad 8th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-mini-7" className="block repairs-megamenu-link">iPad Mini 8.3" 7th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-air-4-5" className="block repairs-megamenu-link">iPad Air 10.9" 4th / 5th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-air-6-7" className="block repairs-megamenu-link">iPad Air 11" 6th / 7th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-pro-11" className="block repairs-megamenu-link">iPad Pro 11" 1st / 2nd Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-pro-12-3-4" className="block repairs-megamenu-link">iPad Pro 12.9" 3rd / 4th Gen</Link>
+                <Link to="/pages/repairs/select-repair/ipad-pro-12-5-6" className="block repairs-megamenu-link">iPad Pro 12.9" 5th / 6th Gen</Link>
+                <Link to="/pages/repairs" className="block repairs-megamenu-link text-[#FF6534] font-bold pt-1">See all iPad</Link>
               </div>
             </div>
 
@@ -144,8 +145,8 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                   </h3>
                 </div>
                 <div className="space-y-2 pt-1">
-                  <a href="#macbook-batteries" className="block repairs-megamenu-link">Macbook Batteries</a>
-                  <a href="#something-else" className="block repairs-megamenu-link">Something else</a>
+                  <Link to="/pages/repairs/select-repair/macbook-batteries" className="block repairs-megamenu-link">Macbook Batteries</Link>
+                  <Link to="/pages/repairs" className="block repairs-megamenu-link">Something else</Link>
                 </div>
               </div>
 
@@ -157,10 +158,10 @@ const RepairsMegaMenu = ({ onMouseEnter, onMouseLeave }) => {
                   </h3>
                 </div>
                 <div className="space-y-2 pt-1">
-                  <a href="#screen-replacements" className="block repairs-megamenu-link">Screen Replacements</a>
-                  <a href="#battery-replacements" className="block repairs-megamenu-link">Battery Replacements</a>
-                  <a href="#iphone-water-damage" className="block repairs-megamenu-link">iPhone Water Damage</a>
-                  <a href="#devices-we-dont-repair" className="block repairs-megamenu-link">Devices we don't repair</a>
+                  <Link to="/pages/repairs" className="block repairs-megamenu-link">Screen Replacements</Link>
+                  <Link to="/pages/repairs" className="block repairs-megamenu-link">Battery Replacements</Link>
+                  <Link to="/pages/repairs" className="block repairs-megamenu-link">iPhone Water Damage</Link>
+                  <Link to="/pages/repairs" className="block repairs-megamenu-link">Devices we don't repair</Link>
                 </div>
               </div>
 

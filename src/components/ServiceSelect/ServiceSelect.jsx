@@ -62,7 +62,7 @@ const ServiceSelect = () => {
       titleColor: 'text-white',
       shadowClass: 'shadow-[0_14px_36px_rgba(27,11,42,0.25)]',
       buttonText: 'Learn More',
-      buttonHref: '#protect',
+      buttonHref: '/pages/protection-product',
       icon: (
         <svg width="92" height="92" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
