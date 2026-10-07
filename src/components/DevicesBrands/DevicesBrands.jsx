@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import phoneImg from '../../assets/images/phone.png';
 import tabletsImg from '../../assets/images/tablets.png';
 import laptopsImg from '../../assets/images/laptops.png';
@@ -16,7 +17,7 @@ const DevicesBrands = () => {
       repairTime: '30 mins',
       warranty: 'Lifetime',
       buttonText: 'Book Now',
-      buttonHref: '#book-repair-phones',
+      buttonHref: '/pages/mobile-repairs',
     },
     {
       id: 'tablets',
@@ -28,7 +29,7 @@ const DevicesBrands = () => {
       repairTime: 'Same Day',
       warranty: 'Lifetime',
       buttonText: 'Book Now',
-      buttonHref: '#book-repair-tablets',
+      buttonHref: '/pages/repairs/ipad',
     },
     {
       id: 'laptops',
@@ -40,7 +41,7 @@ const DevicesBrands = () => {
       repairTime: '24 Hours',
       warranty: '1 Year',
       buttonText: 'Book Now',
-      buttonHref: '#book-repair-laptops',
+      buttonHref: '/pages/repairs/macbook',
     },
   ];
 
@@ -67,7 +68,7 @@ const DevicesBrands = () => {
           </p>
         </div>
 
-        {/* 3 Devices Cards Grid (UI inspired by Image 2) */}
+        {/* 3 Devices Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-20">
           {devices.map((device) => (
             <div
@@ -109,48 +110,23 @@ const DevicesBrands = () => {
                 </div>
 
                 <div>
-                  {/* Stats Box (Lessons / Duration style from Image 2) */}
-                  {/* <div className="bg-[#F8F9FA] rounded-2xl p-3.5 my-4 flex items-center justify-around text-xs text-[#555062] font-medium border border-gray-100">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#FF6534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <div>
-                        <span className="block text-[10px] text-gray-400 uppercase font-semibold">Time</span>
-                        <span className="font-bold text-[#1F1B2E]">{device.repairTime}</span>
-                      </div>
-                    </div>
-
-                    <div className="w-[1px] h-6 bg-gray-200"></div>
-
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#FF6534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                      <div>
-                        <span className="block text-[10px] text-gray-400 uppercase font-semibold">Warranty</span>
-                        <span className="font-bold text-[#1F1B2E]">{device.warranty}</span>
-                      </div>
-                    </div>
-                  </div> */}
-
                   {/* Card Action Button */}
-                  <a
-                    href={device.buttonHref}
+                  <Link
+                    to={device.buttonHref}
                     className="w-full py-3.5 rounded-xl bg-white border-2 border-[#FF6534] text-[#FF6534] font-bold text-sm sm:text-base hover:bg-[#FF6534] hover:text-white transition-all duration-200 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>{device.buttonText}</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Brands Section (Apple, Samsung, Google) from Image 1 */}
+        {/* Brands Section (Apple, Samsung, Google) */}
         <div className="bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] text-center">
           <h4 className="text-xs uppercase tracking-widest font-bold text-[#8E8A9C] mb-8">
             TRUSTED BRAND SPECIALISTS
@@ -158,20 +134,29 @@ const DevicesBrands = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16 md:gap-24 opacity-90">
             {/* Apple Logo & Text */}
-            <div className="flex items-center gap-2.5 text-[#1F1B2E] hover:opacity-100 hover:scale-105 transition-all cursor-pointer">
+            <Link
+              to="/pages/repairs/apple"
+              className="flex items-center gap-2.5 text-[#1F1B2E] hover:opacity-100 hover:scale-105 transition-all cursor-pointer"
+            >
               <svg className="w-8 h-8 fill-current" viewBox="0 0 170 170">
                 <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.13-1.9-14.36-6.1-3.37-2.73-7.25-7.38-11.64-13.94-6.43-9.61-11.53-20.04-15.3-31.28-3.77-11.25-5.65-22.14-5.65-32.68 0-14.45 3.65-26.31 10.96-35.58 7.31-9.27 16.4-13.99 27.27-14.16 4.79 0 9.87 1.15 15.24 3.44 5.37 2.29 9.17 3.44 11.4 3.44 1.9 0 5.72-1.2 11.47-3.6 5.75-2.4 10.65-3.5 14.7-3.3 11.16.63 20.31 4.96 27.44 12.99-9.82 5.95-14.63 14.16-14.43 24.63.2 8.35 3.4 15.42 9.6 21.2 6.2 5.78 13.62 9.07 22.26 9.87-2.15 6.42-4.99 13.1-8.52 20.04zM119.22 34.64c0-7.24 2.66-14.1 7.98-20.58 5.32-6.48 11.95-10.45 19.89-11.91.43 2.15.54 3.79.34 4.93-.41 7.37-3.1 14.3-8.08 20.78-4.99 6.48-11.61 10.4-19.86 11.75-.12-1.42-.27-3.08-.27-4.97z"/>
               </svg>
               <span className="font-extrabold text-2xl tracking-tight text-[#1F1B2E]">Apple</span>
-            </div>
+            </Link>
 
             {/* SAMSUNG Text Logo */}
-            <div className="text-[#1F1B2E] font-black text-2xl tracking-[0.18em] uppercase hover:opacity-100 hover:scale-105 transition-all cursor-pointer font-sans">
+            <Link
+              to="/pages/repairs/samsung"
+              className="text-[#1F1B2E] font-black text-2xl tracking-[0.18em] uppercase hover:opacity-100 hover:scale-105 transition-all cursor-pointer font-sans"
+            >
               SAMSUNG
-            </div>
+            </Link>
 
             {/* Google Colorful Logo */}
-            <div className="flex items-center gap-2 hover:opacity-100 hover:scale-105 transition-all cursor-pointer">
+            <Link
+              to="/pages/repairs/google"
+              className="flex items-center gap-2 hover:opacity-100 hover:scale-105 transition-all cursor-pointer"
+            >
               <svg className="w-8 h-8" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -186,7 +171,7 @@ const DevicesBrands = () => {
                 <span className="text-[#34A853]">l</span>
                 <span className="text-[#EA4335]">e</span>
               </span>
-            </div>
+            </Link>
           </div>
         </div>
 

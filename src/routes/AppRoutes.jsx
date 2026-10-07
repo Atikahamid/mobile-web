@@ -9,6 +9,9 @@ import MobileRepairs from '../pages/MobileRepairs/MobileRepairs';
 import ProtectionProduct from '../pages/ProtectionProduct/ProtectionProduct';
 import AppleRepairs from '../pages/AppleRepairs/AppleRepairs';
 import SamsungRepairs from '../pages/SamsungRepairs/SamsungRepairs';
+import GoogleRepairs from '../pages/GoogleRepairs/GoogleRepairs';
+import IPadRepairs from '../pages/IPadRepairs/IPadRepairs';
+import MacbookRepairs from '../pages/MacbookRepairs/MacbookRepairs';
 import SelectRepairScreen from '../pages/SelectRepairScreen/SelectRepairScreen';
 
 /**
@@ -50,6 +53,21 @@ const AppRoutes = () => {
       <Route path="/pages/repairs/samsung" element={<SamsungRepairs />} />
       <Route path="/repairs/samsung" element={<SamsungRepairs />} />
       <Route path="/samsung-repairs" element={<SamsungRepairs />} />
+
+      {/* Google Repairs Routes */}
+      <Route path="/pages/repairs/google" element={<GoogleRepairs />} />
+      <Route path="/repairs/google" element={<GoogleRepairs />} />
+      <Route path="/google-repairs" element={<GoogleRepairs />} />
+
+      {/* iPad Repairs Routes */}
+      <Route path="/pages/repairs/ipad" element={<IPadRepairs />} />
+      <Route path="/repairs/ipad" element={<IPadRepairs />} />
+      <Route path="/ipad-repairs" element={<IPadRepairs />} />
+
+      {/* Macbook Repairs Routes */}
+      <Route path="/pages/repairs/macbook" element={<MacbookRepairs />} />
+      <Route path="/repairs/macbook" element={<MacbookRepairs />} />
+      <Route path="/macbook-repairs" element={<MacbookRepairs />} />
 
       {/* Select Repair Routes (Model specific) */}
       <Route path="/pages/repairs/apple/:modelId" element={<SelectRepairScreen />} />

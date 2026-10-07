@@ -30,7 +30,7 @@ const SelectDeviceType = () => {
       badge: 'Same Day Repair',
       price: 'From £49',
       buttonText: 'Book iPad Repair',
-      href: '#ipad-repairs',
+      href: '/pages/repairs/ipad',
     },
     {
       id: 'macbook',
@@ -40,7 +40,7 @@ const SelectDeviceType = () => {
       badge: 'Express Service',
       price: 'From £69',
       buttonText: 'Book Macbook Repair',
-      href: '#macbook-repairs',
+      href: '/pages/repairs/macbook',
     },
   ];
 

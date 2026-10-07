@@ -37,7 +37,7 @@ const MobileRepairs = () => {
     {
       id: 'google',
       name: 'Google',
-      href: '#google-repairs',
+      href: '/pages/repairs/google',
       image: googleImg,
     },
   ];
