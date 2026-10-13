@@ -32,25 +32,25 @@ const ProtectionProduct = () => {
 
       {/* Main Container */}
       <main className="flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        
+
         {/* Main Screen Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FF6534] text-center mb-8 sm:mb-10 tracking-tight">
-          iSmash Protection Product
+          SAMZ Protection Product
         </h1>
 
-        {/* First Section: iSmash Protection Pack Banner */}
+        {/* First Section: SAMZ Protection Pack Banner */}
         <section className="bg-[#1B0B2A] rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden mb-8 border border-[#2D1645]">
           {/* Subtle Ambient Background Highlights */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#FF6534]/15 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FF6534]/10 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
-            
+
             {/* Left Column: Branding Title & Tagline */}
             <div className="lg:col-span-5 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 mb-2">
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                  iSmash
+                  SAMZ
                 </span>
               </div>
 
@@ -79,7 +79,7 @@ const ProtectionProduct = () => {
 
             {/* Right Column: Visual Pack Perks */}
             <div className="lg:col-span-7 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-4 sm:gap-6 text-center">
-              
+
               {/* Feature 1: Any Case */}
               <div className="flex flex-col items-center max-w-[130px]">
                 <div className="w-16 h-24 border-2 border-white/80 rounded-2xl flex items-center justify-center p-1.5 mb-2 bg-white/5 backdrop-blur-sm">
@@ -164,11 +164,11 @@ const ProtectionProduct = () => {
                 <div className="bg-[#FFF2EC]/70 rounded-2xl p-5 border border-[#FF6534]/20 space-y-3.5 text-xs sm:text-sm text-gray-700 font-medium">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-[#FF6534] mt-0.5 flex-shrink-0" />
-                    <span>Screen replacements will be with our <strong>'iSmash Standard'</strong> option.</span>
+                    <span>Screen replacements will be with our <strong>'SAMZ Standard'</strong> option.</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-[#FF6534] mt-0.5 flex-shrink-0" />
-                    <span>Upgrade to replacements with <strong>'iSmash Premium'</strong> screens for an extra £15.</span>
+                    <span>Upgrade to replacements with <strong>'SAMZ Premium'</strong> screens for an extra £15.</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-[#FF6534] mt-0.5 flex-shrink-0" />
@@ -216,7 +216,7 @@ const ProtectionProduct = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#FF6534] mt-2 flex-shrink-0"></span>
-                    <span>If your screen protector ever breaks within the following 12 months, just pop into any iSmash store and we will replace it for no additional charge.</span>
+                    <span>If your screen protector ever breaks within the following 12 months, just pop into any SAMZ store and we will replace it for no additional charge.</span>
                   </div>
                 </div>
               </div>
@@ -249,22 +249,20 @@ const ProtectionProduct = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <button
                     onClick={() => setActiveTcTab('before-17nov22')}
-                    className={`p-4 rounded-xl font-bold text-xs sm:text-sm text-center transition-all duration-200 border cursor-pointer ${
-                      activeTcTab === 'before-17nov22'
-                        ? 'bg-[#B5CFE3] text-[#1F1B2E] border-[#93B7D5] shadow-sm font-extrabold ring-2 ring-[#B5CFE3]/50'
-                        : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200/80'
-                    }`}
+                    className={`p-4 rounded-xl font-bold text-xs sm:text-sm text-center transition-all duration-200 border cursor-pointer ${activeTcTab === 'before-17nov22'
+                      ? 'bg-[#B5CFE3] text-[#1F1B2E] border-[#93B7D5] shadow-sm font-extrabold ring-2 ring-[#B5CFE3]/50'
+                      : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200/80'
+                      }`}
                   >
                     T&Cs for protection product bought up to and including 17/11/22
                   </button>
 
                   <button
                     onClick={() => setActiveTcTab('after-18nov22')}
-                    className={`p-4 rounded-xl font-bold text-xs sm:text-sm text-center transition-all duration-200 border cursor-pointer ${
-                      activeTcTab === 'after-18nov22'
-                        ? 'bg-[#B5CFE3] text-[#1F1B2E] border-[#93B7D5] shadow-sm font-extrabold ring-2 ring-[#B5CFE3]/50'
-                        : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200/80'
-                    }`}
+                    className={`p-4 rounded-xl font-bold text-xs sm:text-sm text-center transition-all duration-200 border cursor-pointer ${activeTcTab === 'after-18nov22'
+                      ? 'bg-[#B5CFE3] text-[#1F1B2E] border-[#93B7D5] shadow-sm font-extrabold ring-2 ring-[#B5CFE3]/50'
+                      : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200/80'
+                      }`}
                   >
                     T&Cs for protection product bought from 18/11/22 to 31/12/24
                   </button>
@@ -280,17 +278,17 @@ const ProtectionProduct = () => {
                           1. Who we are
                         </h3>
                         <p className="mb-2 leading-relaxed">
-                          1.1. We are iSmash UK Trading Limited, a company registered in England and Wales under company number 09347088 and a registered office at Suite 3.08 20 Procter Street, London, United Kingdom, WC1V 6NX. Our VAT number is 214 8840 08.
+                          1.1. We are SAMZ UK Trading Limited, a company registered in England and Wales under company number 09347088 and a registered office at Suite 3.08 20 Procter Street, London, United Kingdom, WC1V 6NX. Our VAT number is 214 8840 08.
                         </p>
                         <p className="leading-relaxed">
                           1.2. For more information about us and our contact details, please follow:{' '}
                           <a
-                            href="https://www.ismash.com/pages/faq-contact-us"
+                            href="https://www.SAMZ.com/pages/faq-contact-us"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#FF6534] underline hover:text-[#e05020] break-all font-semibold"
                           >
-                            https://www.ismash.com/pages/faq-contact-us
+                            https://www.SAMZ.com/pages/faq-contact-us
                           </a>
                         </p>
                       </div>
@@ -303,12 +301,12 @@ const ProtectionProduct = () => {
                         <p className="mb-2 leading-relaxed">
                           2.1. These terms and conditions ("Protection Product Terms") shall apply to the provision of our protection product Service ("Protection Product") to you and they incorporate by reference our Conditions of Repair found{' '}
                           <a
-                            href="https://www.ismash.com/pages/terms-conditions"
+                            href="https://www.SAMZ.com/pages/terms-conditions"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#FF6534] underline hover:text-[#e05020] break-all font-semibold"
                           >
-                            https://www.ismash.com/pages/terms-conditions
+                            https://www.SAMZ.com/pages/terms-conditions
                           </a>
                           , which together (and any other documents and policies which are referred to in them) make up the Agreement between you and us in respect of the services and/or products that we may provide to you as part of the Protection Product.
                         </p>
@@ -328,17 +326,17 @@ const ProtectionProduct = () => {
                           1. Who we are
                         </h3>
                         <p className="mb-2 leading-relaxed">
-                          1.1. We are iSmash UK Trading Limited, registered in England & Wales under company number 09347088. VAT number 214 8840 08.
+                          1.1. We are SAMZ UK Trading Limited, registered in England & Wales under company number 09347088. VAT number 214 8840 08.
                         </p>
                         <p className="leading-relaxed">
                           1.2. For customer support or store enquiries, please visit:{' '}
                           <a
-                            href="https://www.ismash.com/pages/faq-contact-us"
+                            href="https://www.SAMZ.com/pages/faq-contact-us"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#FF6534] underline hover:text-[#e05020] break-all font-semibold"
                           >
-                            https://www.ismash.com/pages/faq-contact-us
+                            https://www.SAMZ.com/pages/faq-contact-us
                           </a>
                         </p>
                       </div>
@@ -349,13 +347,13 @@ const ProtectionProduct = () => {
                           2. Terms & Coverage Details
                         </h3>
                         <p className="mb-2 leading-relaxed">
-                          2.1. Coverage includes 1 free screen replacement (iSmash Standard grade) and unlimited screen protector replacements within 12 months from original purchase date.
+                          2.1. Coverage includes 1 free screen replacement (SAMZ Standard grade) and unlimited screen protector replacements within 12 months from original purchase date.
                         </p>
                         <p className="mb-2 leading-relaxed">
                           2.2. Customers must present the original fitted case and screen protector (even if damaged or shattered) at the store to claim a replacement.
                         </p>
                         <p className="leading-relaxed">
-                          2.3. Screen replacements can be upgraded to iSmash Premium screens for a £15 surcharge at the time of repair booking.
+                          2.3. Screen replacements can be upgraded to SAMZ Premium screens for a £15 surcharge at the time of repair booking.
                         </p>
                       </div>
                     </>

@@ -4,7 +4,7 @@ import HeroSlider from '../../components/HeroSlider/HeroSlider';
 import CustomerReviews from '../../components/CustomerReviews/CustomerReviews';
 import ServiceSelect from '../../components/ServiceSelect/ServiceSelect';
 import DevicesBrands from '../../components/DevicesBrands/DevicesBrands';
-import WhyISmash from '../../components/WhyISmash/WhyISmash';
+import WhySAMZ from '../../components/WhySAMZ/WhySAMZ';
 import SupportingLinks from '../../components/SupportingLinks/SupportingLinks';
 import Footer from '../../components/Footer/Footer';
 
@@ -28,8 +28,8 @@ const Home = () => {
         {/* Devices and Brands Section */}
         <DevicesBrands />
 
-        {/* Why iSmash Section */}
-        <WhyISmash />
+        {/* Why SAMZ Section */}
+        <WhySAMZ />
 
         {/* Supporting Links Section */}
         <SupportingLinks />

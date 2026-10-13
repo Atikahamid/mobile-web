@@ -95,7 +95,7 @@ const IPadRepairs = () => {
         {/* SECTION 1: HERO SECTION (Matches Image 1) */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/70 shadow-sm relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-4 sm:space-y-6">
               <span className="text-xs font-bold text-[#FF6534] uppercase tracking-wider">
@@ -105,9 +105,9 @@ const IPadRepairs = () => {
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#1F1035] tracking-tight leading-tight">
                 iPad <span className="text-[#FF6534]">Repairs</span>
               </h1>
-              
+
               <p className="text-sm sm:text-base text-gray-600 font-medium leading-relaxed max-w-xl">
-                Screen, battery and other repairs across iPad, iPad Air, iPad Mini and iPad Pro, with support available wherever you are in the UK. Find your model by name or A-number, than check repair availability with iSmash.
+                Screen, battery and other repairs across iPad, iPad Air, iPad Mini and iPad Pro, with support available wherever you are in the UK. Find your model by name or A-number, than check repair availability with SAMZ.
               </p>
 
               {/* Action Buttons Row */}
@@ -196,7 +196,7 @@ const IPadRepairs = () => {
 
         {/* SECTION 3: MODEL SELECTION MAIN CONTAINER (Matches Image 2 & 3) */}
         <section id="choose-ipad" className="bg-[#F6F4FA] rounded-3xl p-6 sm:p-10 border border-gray-200/60 shadow-sm space-y-8">
-          
+
           {/* Section Header */}
           <div className="space-y-1">
             <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
@@ -255,11 +255,10 @@ const IPadRepairs = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveTab(cat.id)}
-                  className={`px-5 py-2.5 rounded-full font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${
-                    isActive
-                      ? 'bg-[#1F1035] text-white shadow-md'
-                      : 'bg-white text-[#1F1035] border border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                  }`}
+                  className={`px-5 py-2.5 rounded-full font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${isActive
+                    ? 'bg-[#1F1035] text-white shadow-md'
+                    : 'bg-white text-[#1F1035] border border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    }`}
                 >
                   {cat.name}
                 </button>

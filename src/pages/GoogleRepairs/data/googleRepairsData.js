@@ -59,13 +59,13 @@ export const googleTrustFeatures = [
   {
     id: 'warranty',
     title: 'Repair warranty',
-    description: 'Eligible Google Pixel repairs include an iSmash repair warranty.',
+    description: 'Eligible Google Pixel repairs include an SAMZ repair warranty.',
     icon: 'checkmark',
   },
   {
     id: 'trusted',
     title: 'Trusted service',
-    description: 'More than one million customers have chosen iSmash.',
+    description: 'More than one million customers have chosen SAMZ.',
     icon: 'star',
   },
 ];

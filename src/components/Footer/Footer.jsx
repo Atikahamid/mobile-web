@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -30,10 +31,10 @@ const Footer = () => {
   return (
     <footer className="footer-container text-[#1C0D2A] py-10 sm:py-12 px-6 sm:px-10 lg:px-16 font-sans relative">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Top Grid: Links and Copyright */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 items-start">
-          
+
           {/* Item 1: Copyright */}
           <div>
             <h4 className="font-extrabold text-base sm:text-lg text-[#1C0D2A] leading-snug">
@@ -43,22 +44,22 @@ const Footer = () => {
 
           {/* Item 2: Terms & Conditions */}
           <div>
-            <a
-              href="#terms-and-conditions"
+            <Link
+              to="/pages/terms-conditions"
               className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
             >
-              Terms & Conditions
-            </a>
+              Terms &amp; Conditions
+            </Link>
           </div>
 
           {/* Item 3: Privacy Notice */}
           <div>
-            <a
-              href="#privacy-notice"
+            <Link
+              to="/pages/privacy-policy"
               className="font-extrabold text-base sm:text-lg text-[#1C0D2A] underline hover:text-[#FF6534] transition-colors"
             >
               Privacy Notice
-            </a>
+            </Link>
           </div>
 
           {/* Item 4: Cookie Settings & Cookie Policy */}
@@ -83,11 +84,11 @@ const Footer = () => {
 
         {/* Bottom Section: Company Registration Info */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-4">
-          
+
           {/* Company Registration & Address Details */}
           <div className="text-xs sm:text-sm text-[#352545] leading-relaxed max-w-3xl font-medium">
             <p>
-              iSmash (UK) Trading Limited registered in England and Wales under the company registration number 09347098
+              SAMZ (UK) Trading Limited registered in England and Wales under the company registration number 09347098
             </p>
             <p className="mt-0.5">
               Registered office address: Holborn Gate, 330 High Holborn, London, England, WC1V 7PP
@@ -102,9 +103,8 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label="Scroll back to top"
-        className={`floating-scroll-top-btn fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 rounded-sm flex items-center justify-center text-white cursor-pointer shadow-lg z-50 transition-all duration-300 ${
-          showScrollTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
-        }`}
+        className={`floating-scroll-top-btn fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 rounded-sm flex items-center justify-center text-white cursor-pointer shadow-lg z-50 transition-all duration-300 ${showScrollTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+          }`}
       >
         <svg
           className="w-5 h-5 text-white"

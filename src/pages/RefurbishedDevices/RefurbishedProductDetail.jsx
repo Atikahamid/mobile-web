@@ -61,7 +61,7 @@ const MainDeviceDisplay = ({ product, selectedColor }) => {
             {/* Screen Wallpaper Content */}
             <div className="my-auto px-2 text-center">
               <div className="w-full py-3 px-2 rounded-2xl bg-white/15 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center shadow-lg">
-                <span className="text-[10px] sm:text-xs text-white/80 font-mono tracking-wider">iSmash Certified</span>
+                <span className="text-[10px] sm:text-xs text-white/80 font-mono tracking-wider">SAMZ Certified</span>
                 <span className="text-sm sm:text-base font-extrabold text-white tracking-wide">{product.name}</span>
                 <span className="text-[9px] text-white/70 mt-0.5 font-medium">{selectedColor?.name}</span>
               </div>
@@ -557,12 +557,12 @@ const RefurbishedProductDetail = () => {
 
       {/* Terms & Conditions Modal Dialog (Matching Header MegaMenu Design) */}
       {isTermsModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-xs animate-fadeIn"
           onClick={() => setIsTermsModalOpen(false)}
         >
           {/* Modal Container */}
-          <div 
+          <div
             className="relative w-[920px] max-w-[94vw] max-h-[85vh] bg-white rounded-[1.25rem] shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-gray-200/90 overflow-hidden flex flex-col font-sans animate-scaleIn"
             onClick={(e) => e.stopPropagation()}
           >
@@ -589,26 +589,26 @@ const RefurbishedProductDetail = () => {
 
             {/* Modal Content Body */}
             <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-gray-700 leading-relaxed font-sans">
-              
+
               <h3 className="text-sm font-bold text-[#FF6534] tracking-wide">
                 Refurbished Devices
               </h3>
 
               <div className="space-y-4">
                 <p>
-                  <strong className="text-gray-900 font-bold">3.1</strong> Following the purchase of a Refurbished Device from a store or online, you are entitled to a 14-day cooling off period, during which time you may return the device to iSmash in the condition it was originally sold to you in, for any reason. iSmash are unable to refund or replace your device outside of this period, unless there is genuine fault, in which case it is covered under our warranty.
+                  <strong className="text-gray-900 font-bold">3.1</strong> Following the purchase of a Refurbished Device from a store or online, you are entitled to a 14-day cooling off period, during which time you may return the device to SAMZ in the condition it was originally sold to you in, for any reason. SAMZ are unable to refund or replace your device outside of this period, unless there is genuine fault, in which case it is covered under our warranty.
                 </p>
 
                 <p>
-                  <strong className="text-gray-900 font-bold">3.2</strong> You will receive a 24 month warranty with your device, and if any fault is found during this period, you are entitled to return the device to iSmash, where we will either provide you with a replacement device, or a refund. In the event that a replacement device is provided, the warranty period will remain as 24 months from the date of the original purchase.
+                  <strong className="text-gray-900 font-bold">3.2</strong> You will receive a 24 month warranty with your device, and if any fault is found during this period, you are entitled to return the device to SAMZ, where we will either provide you with a replacement device, or a refund. In the event that a replacement device is provided, the warranty period will remain as 24 months from the date of the original purchase.
                 </p>
 
                 <p>
-                  <strong className="text-gray-900 font-bold">3.3</strong> If your battery falls below 80% in the 3 years following your purchase, we will replace the battery on your device free of charge, up to once per year, in any of our branches. The replacement will be an iSmash battery for Apple devices and Genuine OEM battery for Google & Samsung devices. In the event that we are unable to replace the battery, we will offer you a like-for-like device.
+                  <strong className="text-gray-900 font-bold">3.3</strong> If your battery falls below 80% in the 3 years following your purchase, we will replace the battery on your device free of charge, up to once per year, in any of our branches. The replacement will be an SAMZ battery for Apple devices and Genuine OEM battery for Google & Samsung devices. In the event that we are unable to replace the battery, we will offer you a like-for-like device.
                 </p>
 
                 <p>
-                  <strong className="text-gray-900 font-bold">3.4</strong> Purchases made in-store must be returned to the original iSmash store. To commence a return for a Refurbished device purchased online, please email <a href="mailto:customerservice@ismash.com" className="text-[#FF6534] font-semibold underline">customerservice@ismash.com</a> with the subject line 'Return Request: ' followed by your order number. You may be asked to cover the return postage, which you will be reimbursed for.
+                  <strong className="text-gray-900 font-bold">3.4</strong> Purchases made in-store must be returned to the original SAMZ store. To commence a return for a Refurbished device purchased online, please email <a href="mailto:customerservice@SAMZ.com" className="text-[#FF6534] font-semibold underline">customerservice@SAMZ.com</a> with the subject line 'Return Request: ' followed by your order number. You may be asked to cover the return postage, which you will be reimbursed for.
                 </p>
               </div>
 

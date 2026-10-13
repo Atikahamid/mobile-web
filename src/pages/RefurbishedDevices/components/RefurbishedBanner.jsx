@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../../../assets/images/ismash-hero2.png';
+import heroImage from '../../../assets/images/SAMZ-hero2.png';
 
 const RefurbishedBanner = () => {
   const handleScrollToCatalog = (e) => {

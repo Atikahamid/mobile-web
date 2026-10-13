@@ -5,7 +5,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('ismash_cart_items');
+      const saved = localStorage.getItem('SAMZ_cart_items');
       return saved ? JSON.parse(saved) : [
         // Pre-populate with default product matching picture for instant demo if empty
         {
@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('ismash_cart_items', JSON.stringify(cartItems));
+      localStorage.setItem('SAMZ_cart_items', JSON.stringify(cartItems));
     } catch (e) {
       console.error('Failed to save cart to localStorage:', e);
     }

@@ -14,7 +14,7 @@ const AboutSection = () => {
       {/* Paragraphs */}
       <div className="text-center space-y-5 text-xs sm:text-sm text-gray-700 leading-relaxed font-medium">
         <p>
-          iSmash specialises in repairing smartphones, tablets &amp; laptops, appointed by <strong className="text-gray-900 font-bold">Samsung</strong> as an <strong className="text-gray-900 font-bold">Authorised Service Partner</strong>, by <strong className="text-gray-900 font-bold">Google</strong> as an <strong className="text-gray-900 font-bold">Authorised Service Provider</strong> and by <strong className="text-gray-900 font-bold">Apple</strong> as an <strong className="text-gray-900 font-bold">Independent Repair Provider</strong>.
+          SAMZ specialises in repairing smartphones, tablets &amp; laptops, appointed by <strong className="text-gray-900 font-bold">Samsung</strong> as an <strong className="text-gray-900 font-bold">Authorised Service Partner</strong>, by <strong className="text-gray-900 font-bold">Google</strong> as an <strong className="text-gray-900 font-bold">Authorised Service Provider</strong> and by <strong className="text-gray-900 font-bold">Apple</strong> as an <strong className="text-gray-900 font-bold">Independent Repair Provider</strong>.
         </p>
 
         <p>
@@ -22,7 +22,7 @@ const AboutSection = () => {
         </p>
 
         <p>
-          Our in-store teams are friendly and knowledgeable, and are able to diagnose a wide range of hardware issues as well as help with any software troubles. iSmash repair technicians are all highly trained and our repairs take place in both our high street stores and service centres.
+          Our in-store teams are friendly and knowledgeable, and are able to diagnose a wide range of hardware issues as well as help with any software troubles. SAMZ repair technicians are all highly trained and our repairs take place in both our high street stores and service centres.
         </p>
       </div>
 

@@ -105,11 +105,11 @@ const CustomerReviews = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F1B2E] tracking-tight leading-tight">
-              What our customers <span className="text-[#FF6534]">say about iSmash</span>
+              What our customers <span className="text-[#FF6534]">say about SAMZ</span>
             </h2>
 
             <p className="text-[#6E6B7B] font-medium text-sm sm:text-base mt-3">
-              Recent Google reviews from customers across iSmash stores.
+              Recent Google reviews from customers across SAMZ stores.
             </p>
           </div>
 
@@ -219,7 +219,7 @@ const CustomerReviews = () => {
             href="#stores"
             className="inline-flex items-center gap-2 bg-white hover:bg-[#FF6534] text-[#1F1B2E] font-bold text-sm sm:text-base px-8 py-3.5 rounded-full border border-gray-200/90 shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 group cursor-pointer"
           >
-            <span>Find your nearest iSmash store</span>
+            <span>Find your nearest SAMZ store</span>
             <svg
               className="w-4 h-4 text-[#1F1B2E] group-hover:translate-x-1 transition-transform"
               fill="none"

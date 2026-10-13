@@ -43,7 +43,7 @@ const MacbookRepairs = () => {
         {/* SECTION 1: HERO SECTION (Matches Image 1) */}
         <section className="bg-gradient-to-r from-blue-50/70 via-slate-50 to-orange-50/40 rounded-3xl p-8 sm:p-12 border border-slate-200/70 shadow-sm relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-4 sm:space-y-6">
               <span className="text-lg font-semibold text-[#1F1035] tracking-tight">
@@ -95,13 +95,13 @@ const MacbookRepairs = () => {
 
         {/* SECTION 2: SELECT YOUR MACBOOK HEADER & INTRO (Matches Image 1 bottom & Image 2 top) */}
         <section id="select-macbook" className="space-y-8">
-          
+
           <div className="text-center space-y-3 max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#FF6534] tracking-tight">
               Select Your MacBook
             </h2>
             <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
-              Whether you have got an Apple Mac, iMac, MacBook, Macbook Pro or Macbook Air, we know how important your iMac is to you, and no matter what the damage to it, we understand you will want this fixed as soon as possible. At iSmash, we provide our customers with express and high-quality repair services.
+              Whether you have got an Apple Mac, iMac, MacBook, Macbook Pro or Macbook Air, we know how important your iMac is to you, and no matter what the damage to it, we understand you will want this fixed as soon as possible. At SAMZ, we provide our customers with express and high-quality repair services.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ const MacbookRepairs = () => {
             <h3 className="text-xl sm:text-2xl font-extrabold text-[#1F1035]">
               Apple Mac and iMac Battery replacement
             </h3>
-            
+
             <p className="text-xs sm:text-sm font-bold italic text-[#FF6534] max-w-xl mx-auto leading-normal">
               At the moment, Battery Replacement is the only repair we can carry out on the Apple MacBook models listed below.
             </p>
@@ -162,7 +162,7 @@ const MacbookRepairs = () => {
         <section className="space-y-12 pt-4">
           {macbookCategories.map((category, index) => (
             <div key={category.categoryTitle} className="space-y-8">
-              
+
               {/* Category Header */}
               <div className="text-center">
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1F1035] tracking-tight">
@@ -275,7 +275,7 @@ const MacbookRepairs = () => {
               {openFaq[1] && (
                 <div className="p-5 bg-white border-t border-slate-100 text-xs sm:text-sm text-gray-600 font-medium space-y-3 leading-relaxed animate-fadeIn">
                   <p>
-                    The cost of iMac repairs can vary depending on the type of repair, the age of the device, the device model and the overall damage done to the computer itself. At iSmash we offer a variety of Apple Mac repairs including iMac battery replacement and Apple Mac screen repair.
+                    The cost of iMac repairs can vary depending on the type of repair, the age of the device, the device model and the overall damage done to the computer itself. At SAMZ we offer a variety of Apple Mac repairs including iMac battery replacement and Apple Mac screen repair.
                   </p>
                   <p>
                     We will ask you a series of questions about your device and the damages when booking your repair appointment with us so that we can determine the total costs of the repairs.

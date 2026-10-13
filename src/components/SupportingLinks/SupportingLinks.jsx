@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './SupportingLinks.css';
 
 const SupportingLinks = () => {
@@ -18,7 +19,7 @@ const SupportingLinks = () => {
     <section className="supporting-links-bg text-white py-16 px-6 sm:px-10 lg:px-16 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12">
-          
+
           {/* Column 1: Newsletter & Social Links (Width: 4/12) */}
           <div className="md:col-span-4 pr-0 md:pr-8 lg:pr-12 md:border-r md:border-white/15">
             {/* Header */}
@@ -120,9 +121,9 @@ const SupportingLinks = () => {
               {/* Sub-links indented under About Us */}
               <ul className="pl-4 space-y-2.5 text-gray-300 font-normal">
                 <li>
-                  <a href="#our-warranty" className="hover:text-[#FF6534] transition-colors">
+                  <Link to="/pages/our-warranty" className="hover:text-[#FF6534] transition-colors">
                     Our Warranty
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#split-payment" className="hover:text-[#FF6534] transition-colors">
@@ -130,9 +131,9 @@ const SupportingLinks = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#about-ismash" className="hover:text-[#FF6534] transition-colors">
-                    About ISmash
-                  </a>
+                  <Link to="/pages/about-us" className="hover:text-[#FF6534] transition-colors">
+                    About SAMZ
+                  </Link>
                 </li>
                 <li>
                   <a href="#news" className="hover:text-[#FF6534] transition-colors">
@@ -145,18 +146,18 @@ const SupportingLinks = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#terms-conditions" className="hover:text-[#FF6534] transition-colors">
-                    Terms & Conditions
-                  </a>
+                  <Link to="/pages/terms-conditions" className="hover:text-[#FF6534] transition-colors">
+                    Terms &amp; Conditions
+                  </Link>
                 </li>
                 <li>
-                  <a href="#privacy-policy" className="hover:text-[#FF6534] transition-colors">
+                  <Link to="/pages/privacy-policy" className="hover:text-[#FF6534] transition-colors">
                     Our Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#offers-deals" className="hover:text-[#FF6534] transition-colors">
-                    ISmash Offers & Deals
+                    SAMZ Offers & Deals
                   </a>
                 </li>
                 <li>

@@ -37,8 +37,8 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Cost-Effective Upgrade:', text: 'The "sweet spot" of the current iPhone lineup' }
       ]
     },
-    warranty: "Your device will come with a 24-Month Warranty from iSmash, so if it stops working or has developed any faults, not as a result of accidental or liquid damage, we'll repair or replace it at no cost to you. If we replace your device, the warranty continues for the remainder of your 24 months from the date of the initial purchase. In addition, our 36-month battery guarantee means that if your battery falls below 80% at any point during this period, we'll replace it in-store, up to three times.",
-    returns: "Purchases made online must be returned using our online returns process. Purchases made in-store must be returned to the original iSmash store."
+    warranty: "Your device will come with a 24-Month Warranty from SAMZ, so if it stops working or has developed any faults, not as a result of accidental or liquid damage, we'll repair or replace it at no cost to you. If we replace your device, the warranty continues for the remainder of your 24 months from the date of the initial purchase. In addition, our 36-month battery guarantee means that if your battery falls below 80% at any point during this period, we'll replace it in-store, up to three times.",
+    returns: "Purchases made online must be returned using our online returns process. Purchases made in-store must be returned to the original SAMZ store."
   },
   {
     id: 'iphone-15',
@@ -76,8 +76,8 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Color-Infused Glass:', text: 'Back glass infused with rich color across the material.' }
       ]
     },
-    warranty: "Your iPhone 15 includes a comprehensive 24-Month iSmash Warranty covering internal defects and hardware faults. Plus, enjoy our 36-month battery health guarantee.",
-    returns: "Online purchases qualify for hassle-free 14-day returns via our online portal. In-store purchases can be returned directly to any iSmash store location."
+    warranty: "Your iPhone 15 includes a comprehensive 24-Month SAMZ Warranty covering internal defects and hardware faults. Plus, enjoy our 36-month battery health guarantee.",
+    returns: "Online purchases qualify for hassle-free 14-day returns via our online portal. In-store purchases can be returned directly to any SAMZ store location."
   },
   {
     id: 'iphone-16',
@@ -113,7 +113,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Super Retina XDR:', text: '6.1-inch OLED with Ceramic Shield front glass.' }
       ]
     },
-    warranty: "Covered by our 24-Month iSmash Warranty against mechanical and electrical defects, with 36-Month Battery Replacement protection.",
+    warranty: "Covered by our 24-Month SAMZ Warranty against mechanical and electrical defects, with 36-Month Battery Replacement protection.",
     returns: "Returns must be requested within 14 days of receipt using our online returns authorization."
   },
   {
@@ -214,7 +214,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Night Mode:', text: 'Auto low-light enhancement for natural photos.' }
       ]
     },
-    warranty: "Backed by 24-Month iSmash Hardware Protection Warranty.",
+    warranty: "Backed by 24-Month SAMZ Hardware Protection Warranty.",
     returns: "Full return coverage within 14 days of purchase."
   },
   {
@@ -249,7 +249,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: '120Hz AMOLED:', text: 'Ultra-responsive adaptive refresh rate.' }
       ]
     },
-    warranty: "24-Month iSmash Warranty covering all component repair costs.",
+    warranty: "24-Month SAMZ Warranty covering all component repair costs.",
     returns: "14-day online return guarantee included."
   },
   {
@@ -282,7 +282,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Vision Booster:', text: 'Optimal outdoor screen visibility.' }
       ]
     },
-    warranty: "24-Month iSmash Warranty provided.",
+    warranty: "24-Month SAMZ Warranty provided.",
     returns: "Returns accepted within 14 days of delivery."
   },
   {
@@ -315,7 +315,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Actua Display:', text: 'Super bright 6.2-inch 120Hz display.' }
       ]
     },
-    warranty: "Includes 24-Month iSmash Technical Warranty.",
+    warranty: "Includes 24-Month SAMZ Technical Warranty.",
     returns: "14 days return policy apply."
   },
   {
@@ -348,7 +348,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Wireless Charging:', text: 'Convenient cable-free power up.' }
       ]
     },
-    warranty: "Covered by 24-Month iSmash Warranty.",
+    warranty: "Covered by 24-Month SAMZ Warranty.",
     returns: "Online order returns accepted within 14 days."
   },
   {
@@ -382,7 +382,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Action Mode:', text: 'Smooth video recording without a gimbal.' }
       ]
     },
-    warranty: "24-Month iSmash Warranty and 36-Month Battery Guarantee included.",
+    warranty: "24-Month SAMZ Warranty and 36-Month Battery Guarantee included.",
     returns: "Returns process supported within 14 days of delivery."
   },
   {
@@ -415,7 +415,7 @@ export const REFURBISHED_PRODUCTS = [
         { title: 'Flex Cam:', text: 'Hands-free group shots and video vlogging.' }
       ]
     },
-    warranty: "24-Month iSmash Warranty covering folding screen mechanism and internals.",
+    warranty: "24-Month SAMZ Warranty covering folding screen mechanism and internals.",
     returns: "14 days return policy from order delivery date."
   }
 ];

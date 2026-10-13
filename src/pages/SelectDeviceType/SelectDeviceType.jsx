@@ -16,7 +16,7 @@ const SelectDeviceType = () => {
       id: 'smartphones',
       title: 'Smartphone Repairs',
       image: phoneImg,
-      description: 'Book Samsung repairs, iPhone repairs, Google and more with our iSmash smartphone repair services.',
+      description: 'Book Samsung repairs, iPhone repairs, Google and more with our SAMZ smartphone repair services.',
       badge: 'Most Popular',
       price: 'From £29',
       buttonText: 'Book Smartphone Repair',
@@ -26,7 +26,7 @@ const SelectDeviceType = () => {
       id: 'ipad',
       title: 'iPad Repairs',
       image: tabletsImg,
-      description: 'iSmash are the experts for all iPad repairs from cracked screens to water damage and battery replacement.',
+      description: 'SAMZ are the experts for all iPad repairs from cracked screens to water damage and battery replacement.',
       badge: 'Same Day Repair',
       price: 'From £49',
       buttonText: 'Book iPad Repair',
@@ -36,7 +36,7 @@ const SelectDeviceType = () => {
       id: 'macbook',
       title: 'Macbook Repairs',
       image: laptopsImg,
-      description: 'iSmash have a large collection of dedicated repair centres for Macbooks, laptops and other computer devices',
+      description: 'SAMZ have a large collection of dedicated repair centres for Macbooks, laptops and other computer devices',
       badge: 'Express Service',
       price: 'From £69',
       buttonText: 'Book Macbook Repair',
@@ -51,7 +51,7 @@ const SelectDeviceType = () => {
 
       {/* Main Content */}
       <main className="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 w-full">
-        
+
         {/* Page Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FF6534] text-center mb-12 sm:mb-16 tracking-tight">
           Select Your Device Type

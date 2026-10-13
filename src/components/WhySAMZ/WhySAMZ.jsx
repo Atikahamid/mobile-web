@@ -1,7 +1,7 @@
 import React from 'react';
-import './WhyISmash.css';
+import './WhySAMZ.css';
 
-const WhyISmash = () => {
+const WhySAMZ = () => {
   const features = [
     {
       id: 'express-repairs',
@@ -130,17 +130,17 @@ const WhyISmash = () => {
   ];
 
   return (
-    <section className="why-ismash-container py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="why-SAMZ-container py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Section Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-[44px] font-extrabold text-[#FF6534] tracking-tight leading-tight mb-5 sm:mb-6">
-          Why iSmash?
+          Why SAMZ?
         </h2>
 
         {/* Section Description Paragraph */}
         <p className="max-w-4xl mx-auto text-[#4A4556] text-sm sm:text-base leading-relaxed font-normal mb-12 sm:mb-16">
-          iSmash specialises in offering an express repair service for smartphones, tablets and computers along with a wide range of mobile accessories and refurbished devices. Since launching in 2013, iSmash has grown to 30 repair shops across the UK and counting! We pride ourselves on offering an express repair service powered by our iSmash accredited technicians, on-site at each of our shops, and all our screen repairs are backed by a lifetime warranty*
+          SAMZ specialises in offering an express repair service for smartphones, tablets and computers along with a wide range of mobile accessories and refurbished devices. Since launching in 2013, SAMZ has grown to 30 repair shops across the UK and counting! We pride ourselves on offering an express repair service powered by our SAMZ accredited technicians, on-site at each of our shops, and all our screen repairs are backed by a lifetime warranty*
         </p>
 
         {/* 6 Feature Badges Row */}
@@ -151,7 +151,7 @@ const WhyISmash = () => {
               className="flex flex-col items-center justify-start group cursor-pointer"
             >
               {/* Icon Container */}
-              <div className="why-ismash-icon-wrapper mb-3 sm:mb-4 flex items-center justify-center h-14 sm:h-16">
+              <div className="why-SAMZ-icon-wrapper mb-3 sm:mb-4 flex items-center justify-center h-14 sm:h-16">
                 {feature.icon}
               </div>
 
@@ -166,7 +166,7 @@ const WhyISmash = () => {
 
         {/* Klarna Payment Banner Box */}
         <div className="inline-block">
-          <div className="why-ismash-klarna-box bg-white border border-[#CBD5E1] rounded-lg px-6 sm:px-10 py-3.5 sm:py-4 shadow-sm flex flex-wrap items-center justify-center gap-3 text-center">
+          <div className="why-SAMZ-klarna-box bg-white border border-[#CBD5E1] rounded-lg px-6 sm:px-10 py-3.5 sm:py-4 shadow-sm flex flex-wrap items-center justify-center gap-3 text-center">
             {/* Klarna Badge with Orange-Red Brand Accent */}
             <span className="bg-[#FF6534] text-white font-extrabold text-xs sm:text-sm px-3 py-1 rounded tracking-tight font-sans">
               Klarna.
@@ -192,4 +192,4 @@ const WhyISmash = () => {
   );
 };
 
-export default WhyISmash;
+export default WhySAMZ;

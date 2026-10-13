@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hero2Image from '../../assets/images/ismash-hero2.png';
+import hero2Image from '../../assets/images/SAMZ-hero2.png';
 import './HeroSection2.css';
 
 const HeroSection2 = () => {
   return (
-    <section className="relative overflow-hidden ismash-hero2-bg h-[29vw] flex items-center justify-center py-10 lg:py-0">
+    <section className="relative overflow-hidden SAMZ-hero2-bg h-[29vw] flex items-center justify-center py-10 lg:py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex items-center justify-center">
 
         {/* Main Content Grid */}

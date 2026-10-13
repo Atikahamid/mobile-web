@@ -148,7 +148,8 @@ const CartPage = () => {
 
                 <button
                   type="button"
-                  onClick={() => alert(`Proceeding to checkout with total £${cartSubtotal}`)}
+                  id="cart-checkout-btn"
+                  onClick={() => navigate('/checkout')}
                   className="mt-4 bg-[#FF6534] hover:bg-[#e05020] text-white font-extrabold text-base py-3.5 px-10 rounded-2xl shadow-lg transition-all duration-200 cursor-pointer active:scale-95"
                 >
                   Checkout Cart

@@ -32,8 +32,8 @@ const SelectRepairScreen = () => {
   const currentOptions = allModelRepairs[activeCategory] || [];
 
   const handleBookRepair = (repairOption) => {
-    // Navigate to store selection or cart
-    navigate('/cart', { state: { repair: repairOption, device: modelName } });
+    // Navigate to multi-step repair booking options flow
+    navigate('/book-repair', { state: { repair: repairOption, device: modelName } });
   };
 
   return (
@@ -69,7 +69,7 @@ const SelectRepairScreen = () => {
             If your {modelName} is damaged, we understand that you would want this repaired in no time so you can go back to enjoying the great performance and features of your device.
             {isExpanded && (
               <span className="block mt-2 text-gray-600 animate-fadeIn">
-                At iSmash, our certified technicians offer quick, reliable, and high-quality screen, battery, and component repairs backed by our comprehensive warranty options.
+                At SAMZ, our certified technicians offer quick, reliable, and high-quality screen, battery, and component repairs backed by our comprehensive warranty options.
               </span>
             )}
             <button
@@ -101,8 +101,8 @@ const SelectRepairScreen = () => {
                   <button
                     onClick={() => setActiveCategory(cat.id)}
                     className={`w-full h-28 sm:h-32 rounded-2xl flex flex-col items-center justify-center p-3 transition-all duration-200 cursor-pointer relative ${isActive
-                        ? 'border-2 border-[#FF6534] bg-white shadow-md'
-                        : 'border border-blue-100/90 bg-[#F4F8FC] hover:bg-[#EBF3FA] text-gray-700 shadow-2xs'
+                      ? 'border-2 border-[#FF6534] bg-white shadow-md'
+                      : 'border border-blue-100/90 bg-[#F4F8FC] hover:bg-[#EBF3FA] text-gray-700 shadow-2xs'
                       }`}
                   >
                     {/* SVG Icon */}

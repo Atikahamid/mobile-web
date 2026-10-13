@@ -38,7 +38,7 @@ const DeviceGraphic = ({ imageType, name }) => {
             {/* Screen Display Wall Art */}
             <div className="my-auto px-2 text-center">
               <div className="w-full h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex flex-col items-center justify-center">
-                <span className="text-[10px] text-white/70 font-mono">iSmash Certified</span>
+                <span className="text-[10px] text-white/70 font-mono">SAMZ Certified</span>
                 <span className="text-xs font-bold text-white tracking-wide">{name}</span>
               </div>
             </div>

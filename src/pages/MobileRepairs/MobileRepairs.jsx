@@ -100,7 +100,7 @@ const MobileRepairs = () => {
         {/* Intro Text Section */}
         {/* <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
           <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium leading-relaxed mb-3">
-            iSmash is your one stop shop for all your mobile phone needs. We provide expert advice, fast turnaround times, competitive pricing and quality workmanship. With our team of highly skilled professionals, we can help you with any smart phone repairs.
+            SAMZ is your one stop shop for all your mobile phone needs. We provide expert advice, fast turnaround times, competitive pricing and quality workmanship. With our team of highly skilled professionals, we can help you with any smart phone repairs.
           </p>
 
           {isExpanded && (

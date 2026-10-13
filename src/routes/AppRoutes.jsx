@@ -4,6 +4,7 @@ import Home from '../pages/Home/Home';
 import RefurbishedDevices from '../pages/RefurbishedDevices/RefurbishedDevices';
 import RefurbishedProductDetail from '../pages/RefurbishedDevices/RefurbishedProductDetail';
 import CartPage from '../pages/Cart/CartPage';
+import CheckoutPage from '../pages/Checkout/CheckoutPage';
 import SelectDeviceType from '../pages/SelectDeviceType/SelectDeviceType';
 import MobileRepairs from '../pages/MobileRepairs/MobileRepairs';
 import ProtectionProduct from '../pages/ProtectionProduct/ProtectionProduct';
@@ -13,6 +14,11 @@ import GoogleRepairs from '../pages/GoogleRepairs/GoogleRepairs';
 import IPadRepairs from '../pages/IPadRepairs/IPadRepairs';
 import MacbookRepairs from '../pages/MacbookRepairs/MacbookRepairs';
 import SelectRepairScreen from '../pages/SelectRepairScreen/SelectRepairScreen';
+import RepairBookingFlow from '../pages/RepairBooking/RepairBookingFlow';
+import AboutUs from '../pages/AboutUs/AboutUs';
+import OurWarranty from '../pages/OurWarranty/OurWarranty';
+import TermsConditions from '../pages/TermsConditions/TermsConditions';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 
 /**
  * AppRoutes Component
@@ -33,7 +39,7 @@ const AppRoutes = () => {
 
       {/* Cart & Checkout Routes */}
       <Route path="/cart" element={<CartPage />} />
-      <Route path="/checkout" element={<CartPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
 
       {/* Select Device Type / Repairs Routes */}
       <Route path="/pages/repairs" element={<SelectDeviceType />} />
@@ -76,10 +82,39 @@ const AppRoutes = () => {
       <Route path="/select-repair/:modelId" element={<SelectRepairScreen />} />
       <Route path="/select-repair" element={<SelectRepairScreen />} />
 
+      {/* Repair Booking Workflow Routes (Visit us / Mail-in) */}
+      <Route path="/book-repair" element={<RepairBookingFlow />} />
+      <Route path="/repair-booking" element={<RepairBookingFlow />} />
+      <Route path="/pages/repairs/book-repair" element={<RepairBookingFlow />} />
+
       {/* Protection Product Routes */}
       <Route path="/pages/protection-product" element={<ProtectionProduct />} />
       <Route path="/protection-product" element={<ProtectionProduct />} />
       <Route path="/protection" element={<ProtectionProduct />} />
+
+      {/* About Us Routes */}
+      <Route path="/pages/about-us" element={<AboutUs />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/pages/about" element={<AboutUs />} />
+      <Route path="/about" element={<AboutUs />} />
+
+      {/* Our Warranty Routes */}
+      <Route path="/pages/our-warranty" element={<OurWarranty />} />
+      <Route path="/our-warranty" element={<OurWarranty />} />
+      <Route path="/pages/warranty" element={<OurWarranty />} />
+      <Route path="/warranty" element={<OurWarranty />} />
+
+      {/* Terms & Conditions Routes */}
+      <Route path="/pages/terms-conditions" element={<TermsConditions />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="/terms" element={<TermsConditions />} />
+
+      {/* Privacy Policy / Privacy Notice Routes */}
+      <Route path="/pages/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/pages/privacy-notice" element={<PrivacyPolicy />} />
+      <Route path="/privacy-notice" element={<PrivacyPolicy />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
 
       {/* Fallback Redirect Route */}
       <Route path="*" element={<Navigate to="/" replace />} />

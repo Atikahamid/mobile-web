@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../../assets/images/ismash-hero.png';
+import heroImage from '../../assets/images/SAMZ-hero.png';
 import './HeroSection.css';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden ismash-hero-bg h-[29vw] flex items-center">
+    <section className="relative overflow-hidden SAMZ-hero-bg h-[29vw] flex items-center">
       {/* Subtle Chevron Pattern SVG Background Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -26,10 +26,10 @@ const HeroSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-0 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
-          
+
           {/* Left Column Text & CTA */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left pl-2 lg:pl-6">
-            
+
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-[#282338] tracking-tight leading-[1.12]">
               Fixes in a <span className="text-[#FF6534] inline-block font-black">flash</span>, repair your device today!
@@ -57,7 +57,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-lg lg:max-w-xl group">
               {/* Soft glow highlight behind graphic */}
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-100/40 to-indigo-100/40 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               {/* Product Image */}
               <img
                 src={heroImage}

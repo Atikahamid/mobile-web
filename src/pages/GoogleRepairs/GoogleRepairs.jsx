@@ -186,7 +186,7 @@ const GoogleRepairs = () => {
               </h2>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium leading-relaxed">
-                iSmash is a Google Authorised Service Provider for Pixel repairs. Supported repairs use genuine parts sourced through Google and are completed by trained technicians.
+                SAMZ is a Google Authorised Service Provider for Pixel repairs. Supported repairs use genuine parts sourced through Google and are completed by trained technicians.
               </p>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium leading-relaxed">
