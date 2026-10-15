@@ -65,7 +65,7 @@ const MacbookRepairs = () => {
               </div>
 
               {/* Trustpilot Badge */}
-              <div className="pt-1">
+              {/* <div className="pt-1">
                 <div className="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-xs font-bold inline-flex items-center gap-1.5 shadow-2xs text-gray-700">
                   <span>Review us on</span>
                   <span className="text-[#00B67A] font-extrabold flex items-center gap-1">
@@ -75,7 +75,7 @@ const MacbookRepairs = () => {
                     Trustpilot
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Image Column */}

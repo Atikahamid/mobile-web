@@ -95,6 +95,12 @@ const Footer = () => {
             </p>
           </div>
 
+          <Link
+            to="/admin/login"
+            className="text-xs font-bold text-[#FF6534] hover:underline shrink-0"
+          >
+            Admin Login
+          </Link>
         </div>
 
       </div>

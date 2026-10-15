@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ShoppingBag, User, Menu, X, LogOut } from 'lucide-react';
 import RepairsMegaMenu from './RepairsMegaMenu';
-import StoreLocatorMegaMenu from './StoreLocatorMegaMenu';
 import AboutUsDropdown from './AboutUsDropdown';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
@@ -12,7 +11,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isRepairsHovered, setIsRepairsHovered] = useState(false);
-  const [isStoreLocatorHovered, setIsStoreLocatorHovered] = useState(false);
   const [isAboutUsHovered, setIsAboutUsHovered] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const userMenuRef = useRef(null);
@@ -35,10 +33,8 @@ const Header = () => {
 
   const navLinks = [
     { title: 'Repairs & Servicing', href: '/pages/repairs' },
-    { title: 'Store Locator', href: '#stores' },
     { title: 'Refurbished Devices', href: '/collections/refurbished' },
     { title: 'About Us', href: '/pages/about-us' },
-    { title: 'Join Our Team', href: '#careers' },
   ];
 
   return (
@@ -65,7 +61,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1 font-semibold text-[15px]">
+          <nav className="hidden lg:flex flex-1 items-center justify-start ml-8 space-x-1 font-semibold text-[15px]">
             {navLinks.map((link, index) => (
               <React.Fragment key={link.title}>
                 {link.title === 'Repairs & Servicing' ? (
@@ -73,7 +69,6 @@ const Header = () => {
                     className="py-6 cursor-pointer"
                     onMouseEnter={() => {
                       setIsRepairsHovered(true);
-                      setIsStoreLocatorHovered(false);
                       setIsAboutUsHovered(false);
                     }}
                     onMouseLeave={() => setIsRepairsHovered(false)}
@@ -86,31 +81,12 @@ const Header = () => {
                       {link.title}
                     </a>
                   </div>
-                ) : link.title === 'Store Locator' ? (
-                  <div
-                    className="py-6 cursor-pointer"
-                    onMouseEnter={() => {
-                      setIsStoreLocatorHovered(true);
-                      setIsRepairsHovered(false);
-                      setIsAboutUsHovered(false);
-                    }}
-                    onMouseLeave={() => setIsStoreLocatorHovered(false)}
-                  >
-                    <a
-                      href={link.href}
-                      className={`px-3 py-2 transition-colors duration-150 tracking-tight whitespace-nowrap ${isStoreLocatorHovered ? 'text-[#FF6534]' : 'text-[#282338] hover:text-[#FF6534]'
-                        }`}
-                    >
-                      {link.title}
-                    </a>
-                  </div>
                 ) : link.title === 'About Us' ? (
                   <div
                     className="relative py-6 cursor-pointer"
                     onMouseEnter={() => {
                       setIsAboutUsHovered(true);
                       setIsRepairsHovered(false);
-                      setIsStoreLocatorHovered(false);
                     }}
                     onMouseLeave={() => setIsAboutUsHovered(false)}
                   >
@@ -291,14 +267,6 @@ const Header = () => {
           <RepairsMegaMenu
             onMouseEnter={() => setIsRepairsHovered(true)}
             onMouseLeave={() => setIsRepairsHovered(false)}
-          />
-        )}
-
-        {/* Store Locator Dropdown Floating Centered */}
-        {isStoreLocatorHovered && (
-          <StoreLocatorMegaMenu
-            onMouseEnter={() => setIsStoreLocatorHovered(true)}
-            onMouseLeave={() => setIsStoreLocatorHovered(false)}
           />
         )}
 

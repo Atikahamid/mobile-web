@@ -20,6 +20,29 @@ import OurWarranty from '../pages/OurWarranty/OurWarranty';
 import TermsConditions from '../pages/TermsConditions/TermsConditions';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 
+/* Admin panel */
+import AdminLayout from '../admin/layout/AdminLayout';
+import AdminLogin from '../admin/pages/AdminLogin';
+import Dashboard from '../admin/pages/Dashboard';
+import DeviceTypesPage from '../admin/pages/DeviceTypesPage';
+import BrandsPage from '../admin/pages/BrandsPage';
+import ModelsPage from '../admin/pages/ModelsPage';
+import RepairCategoriesPage from '../admin/pages/RepairCategoriesPage';
+import RepairServicesPage from '../admin/pages/RepairServicesPage';
+import ProductsPage from '../admin/pages/ProductsPage';
+import OrdersPage from '../admin/pages/OrdersPage';
+import PaymentsPage from '../admin/pages/PaymentsPage';
+import DiscountsPage from '../admin/pages/DiscountsPage';
+import BookingsPage from '../admin/pages/BookingsPage';
+import StoresPage from '../admin/pages/StoresPage';
+import CmsPagesPage from '../admin/pages/CmsPagesPage';
+import HeroSlidesPage from '../admin/pages/HeroSlidesPage';
+import ReviewsPage from '../admin/pages/ReviewsPage';
+import FaqsPage from '../admin/pages/FaqsPage';
+import ProtectionPage from '../admin/pages/ProtectionPage';
+import MediaPage from '../admin/pages/MediaPage';
+import UsersPage from '../admin/pages/UsersPage';
+
 /**
  * AppRoutes Component
  * Centralized, structured route configuration for the entire application.
@@ -115,6 +138,31 @@ const AppRoutes = () => {
       <Route path="/pages/privacy-notice" element={<PrivacyPolicy />} />
       <Route path="/privacy-notice" element={<PrivacyPolicy />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
+
+      {/* Admin Panel */}
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="device-types" element={<DeviceTypesPage />} />
+        <Route path="brands" element={<BrandsPage />} />
+        <Route path="models" element={<ModelsPage />} />
+        <Route path="repair-categories" element={<RepairCategoriesPage />} />
+        <Route path="repair-services" element={<RepairServicesPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="orders" element={<OrdersPage />} />
+        <Route path="payments" element={<PaymentsPage />} />
+        <Route path="discounts" element={<DiscountsPage />} />
+        <Route path="bookings" element={<BookingsPage />} />
+        <Route path="stores" element={<StoresPage />} />
+        <Route path="cms-pages" element={<CmsPagesPage />} />
+        <Route path="hero-slides" element={<HeroSlidesPage />} />
+        <Route path="reviews" element={<ReviewsPage />} />
+        <Route path="faqs" element={<FaqsPage />} />
+        <Route path="protection" element={<ProtectionPage />} />
+        <Route path="media" element={<MediaPage />} />
+        <Route path="users" element={<UsersPage />} />
+      </Route>
 
       {/* Fallback Redirect Route */}
       <Route path="*" element={<Navigate to="/" replace />} />

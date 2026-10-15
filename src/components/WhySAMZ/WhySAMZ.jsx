@@ -165,19 +165,19 @@ const WhySAMZ = () => {
         </div>
 
         {/* Klarna Payment Banner Box */}
-        <div className="inline-block">
+        {/* <div className="inline-block">
           <div className="why-SAMZ-klarna-box bg-white border border-[#CBD5E1] rounded-lg px-6 sm:px-10 py-3.5 sm:py-4 shadow-sm flex flex-wrap items-center justify-center gap-3 text-center">
-            {/* Klarna Badge with Orange-Red Brand Accent */}
+            Klarna Badge with Orange-Red Brand Accent
             <span className="bg-[#FF6534] text-white font-extrabold text-xs sm:text-sm px-3 py-1 rounded tracking-tight font-sans">
               Klarna.
             </span>
 
-            {/* Buy now, pay later text */}
+            Buy now, pay later text
             <span className="text-[#1F1B2E] font-bold text-sm sm:text-base">
               Buy now, pay later.
             </span>
 
-            {/* Learn more link */}
+            Learn more link
             <a
               href="#klarna-learn-more"
               className="text-[#1F1B2E] underline font-medium text-sm sm:text-base hover:text-[#FF6534] transition-colors cursor-pointer"
@@ -185,7 +185,7 @@ const WhySAMZ = () => {
               Learn more
             </a>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
