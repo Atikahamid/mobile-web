@@ -20,7 +20,7 @@ const typeDot = {
   payment: 'bg-emerald-500',
   stock: 'bg-amber-500',
   order: 'bg-violet-500',
-  user: 'bg-[#FF6534]',
+  user: 'bg-[#b8370e]',
 };
 
 const Dashboard = () => {
@@ -73,7 +73,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         {/* Recent activity */}
         <div className="xl:col-span-1 bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
-          <h2 className="text-lg font-extrabold text-[#FF6534] mb-4">Recent activity</h2>
+          <h2 className="text-lg font-extrabold text-[#b8370e] mb-4">Recent activity</h2>
           <ul className="space-y-3">
             {recentActivity.map((item) => (
               <li key={item.id} className="flex gap-3 items-start">
@@ -90,8 +90,8 @@ const Dashboard = () => {
         {/* Latest bookings */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-extrabold text-[#FF6534]">Latest bookings</h2>
-            <Link to="/admin/bookings" className="text-xs font-bold text-[#1C0D2A] hover:text-[#FF6534]">
+            <h2 className="text-lg font-extrabold text-[#b8370e]">Latest bookings</h2>
+            <Link to="/admin/bookings" className="text-xs font-bold text-[#1C0D2A] hover:text-[#b8370e]">
               View all
             </Link>
           </div>
@@ -119,8 +119,8 @@ const Dashboard = () => {
         {/* Latest orders */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-extrabold text-[#FF6534]">Latest orders</h2>
-            <Link to="/admin/orders" className="text-xs font-bold text-[#1C0D2A] hover:text-[#FF6534]">
+            <h2 className="text-lg font-extrabold text-[#b8370e]">Latest orders</h2>
+            <Link to="/admin/orders" className="text-xs font-bold text-[#1C0D2A] hover:text-[#b8370e]">
               View all
             </Link>
           </div>

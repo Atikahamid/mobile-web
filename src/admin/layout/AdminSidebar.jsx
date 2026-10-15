@@ -16,7 +16,7 @@ const AdminSidebar = ({ open, onClose }) => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 z-50 h-full w-[280px] bg-[#FF6534] text-white flex flex-col shadow-xl transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed top-0 left-0 z-50 h-full w-[280px] bg-[#b8370e] text-white flex flex-col shadow-xl transition-transform duration-300 lg:translate-x-0 ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -54,7 +54,7 @@ const AdminSidebar = ({ open, onClose }) => {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition-colors ${
                             isActive
-                              ? 'bg-white text-[#FF6534] shadow-sm'
+                              ? 'bg-white text-[#b8370e] shadow-sm'
                               : 'text-white/95 hover:bg-white/15'
                           }`
                         }

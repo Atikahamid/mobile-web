@@ -27,7 +27,7 @@ const AdminTable = ({ columns, rows, onEdit, onDelete, onView }) => {
               rows.map((row, idx) => (
                 <tr
                   key={row.id ?? idx}
-                  className={`border-t border-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFC]'} hover:bg-[#FF6534]/5 transition-colors`}
+                  className={`border-t border-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFC]'} hover:bg-[#b8370e]/5 transition-colors`}
                 >
                   {columns.map((col) => (
                     <td key={col.key} className="px-4 py-3.5 text-sm font-medium text-[#1F1B2E]">
@@ -50,7 +50,7 @@ const AdminTable = ({ columns, rows, onEdit, onDelete, onView }) => {
                         <button
                           type="button"
                           onClick={() => onEdit(row)}
-                          className="p-2 rounded-lg text-gray-500 hover:bg-[#FF6534]/10 hover:text-[#FF6534] cursor-pointer"
+                          className="p-2 rounded-lg text-gray-500 hover:bg-[#b8370e]/10 hover:text-[#b8370e] cursor-pointer"
                           title="Edit"
                         >
                           <Pencil className="w-4 h-4" />

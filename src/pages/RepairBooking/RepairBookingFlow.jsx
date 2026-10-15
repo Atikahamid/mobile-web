@@ -47,16 +47,16 @@ const RepairBookingFlow = () => {
   const [selectedTime, setSelectedTime] = useState(null); // e.g. '10:00'
 
   const TIME_SLOTS = [
-    '10:00','10:30','11:00','11:30',
-    '12:00','12:30','13:00','13:30',
-    '14:00','14:30','15:00','15:30',
-    '16:00','16:30','17:00','17:30',
-    '18:00','18:30',
+    '10:00', '10:30', '11:00', '11:30',
+    '12:00', '12:30', '13:00', '13:30',
+    '14:00', '14:30', '15:00', '15:30',
+    '16:00', '16:30', '17:00', '17:30',
+    '18:00', '18:30',
   ];
 
-  const MONTH_NAMES = ['January','February','March','April','May','June',
-    'July','August','September','October','November','December'];
-  const DAY_LABELS = ['Mo','Tu','We','Th','Fr','Sa','Su'];
+  const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  const DAY_LABELS = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
 
   // Build calendar grid for current calMonth/calYear
   const buildCalendar = () => {
@@ -81,8 +81,8 @@ const RepairBookingFlow = () => {
 
   const formatSelectedDateTime = () => {
     if (!selectedDate || !selectedTime) return null;
-    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const d = new Date(calYear, calMonth, selectedDate);
     const dayName = days[d.getDay()];
     const suffix = selectedDate === 1 ? 'st' : selectedDate === 2 ? 'nd' : selectedDate === 3 ? 'rd' : 'th';
@@ -125,15 +125,16 @@ const RepairBookingFlow = () => {
   ]);
 
   // Progress bar step index mapping
-  // visit-us path: method(0) -> visit-us(1) -> choose-date-time(2) -> confirm-details(3) -> confirm-purchase(4)
-  // mail-in path:  method(0) -> mail-in(1)  -> confirm-details(2) -> confirm-purchase(3) -> checkout(4)
+  // visit-us path: method(0) -> choose-date-time(1) -> confirm-details(2) -> confirm-purchase(3) -> checkout(4)
+  //   (service centre selection skipped – single store auto-selected)
+  // mail-in path:  method(0) -> mail-in(1) -> confirm-details(2) -> confirm-purchase(3) -> checkout(4)
   const stepIndexMap = {
     'method-selection': 0,
-    'visit-us': 1,
+    'visit-us': 1,       // kept for safety; normally jumped over
     'mail-in': 1,
-    'choose-date-time': 2,
-    'confirm-details': selectedMethod === 'visit-us' ? 3 : 2,
-    'confirm-purchase': selectedMethod === 'visit-us' ? 4 : 3,
+    'choose-date-time': 1,
+    'confirm-details': selectedMethod === 'visit-us' ? 2 : 2,
+    'confirm-purchase': selectedMethod === 'visit-us' ? 3 : 3,
     'checkout': 4,
   };
   const currentStepIndex = stepIndexMap[currentStep] ?? 0;
@@ -143,7 +144,8 @@ const RepairBookingFlow = () => {
     if (currentStep === 'visit-us' || currentStep === 'mail-in') {
       setCurrentStep('method-selection');
     } else if (currentStep === 'choose-date-time') {
-      setCurrentStep('visit-us');
+      // Single-store flow: skip the service centre screen, go back to method selection
+      setCurrentStep('method-selection');
     } else if (currentStep === 'confirm-details') {
       if (selectedMethod === 'visit-us') setCurrentStep('choose-date-time');
       else setCurrentStep('mail-in');
@@ -157,7 +159,16 @@ const RepairBookingFlow = () => {
   // Select method handler
   const handleSelectMethod = (method) => {
     setSelectedMethod(method);
-    setCurrentStep(method);
+    if (method === 'visit-us') {
+      // Auto-select the single store and jump straight to date/time picker
+      setSelectedStore(SINGLE_STORE.id);
+      setSelectedStoreObj(SINGLE_STORE);
+      setSelectedDate(null);
+      setSelectedTime(null);
+      setCurrentStep('choose-date-time');
+    } else {
+      setCurrentStep(method);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -216,28 +227,19 @@ const RepairBookingFlow = () => {
 
   const cartTotal = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  // Service Centres Data (main list shown by default)
-  const serviceCentres = [
-    { id: 'liverpool',    name: 'Liverpool One (Sky)',           address: 'Liverpool One Shopping Centre, Liverpool L1 8LQ', distance: '3661.9', available: false },
-    { id: 'manchester',  name: 'Manchester Arndale Centre',      address: 'Arndale Centre, Manchester M4 3AQ',              distance: '3685.2', available: true  },
-    { id: 'leeds',       name: 'Leeds Trinity Centre',           address: 'Trinity Leeds Shopping Centre, Leeds LS1 5AT',   distance: '3698.1', available: true  },
-    { id: 'sheffield',   name: 'Sheffield Meadowhall Centre',    address: 'Meadowhall Centre, Sheffield S9 1EP',            distance: '3716.1', available: false },
-    { id: 'nottingham',  name: 'Nottingham Victoria Centre',     address: 'Victoria Centre, Nottingham NG1 3QN',            distance: '3754.4', available: false },
-    { id: 'birmingham',  name: 'Birmingham Bullring',            address: 'Bullring Shopping Centre, Birmingham B5 4BU',    distance: '3790.2', available: true  },
-  ];
+  // ── Single store (only one location – no need to choose) ──────────────────
+  const SINGLE_STORE = {
+    id: 'main-store',
+    name: 'SAMZ Service Centre',
+    address: '123 High Street, London EC1A 1BB',
+    distance: '0.0',
+    available: true,
+  };
 
-  // Extra stores shown when 'View more locations' is expanded
-  const moreServiceCentres = [
-    { id: 'london-oxford', name: 'London Oxford Street',          address: '435 Oxford St, London W1C 2PL',                  distance: '3810.5', available: true  },
-    { id: 'harrow',        name: 'Harrow St Ann\'s Centre',       address: "St Ann's Shopping Centre, Harrow HA1 1AT",        distance: '3820.3', available: false },
-    { id: 'westfield',    name: 'Westfield White City',           address: '113B Westfield Shopping Centre, London W12 7GF',  distance: '3830.6', available: true  },
-    { id: 'edinburgh',    name: 'Edinburgh St James (Sky)',       address: 'St James Quarter, Edinburgh EH1 3SS',             distance: '3855.9', available: false },
-    { id: 'glasgow',      name: 'Glasgow Silverburn',             address: 'Barrhead Rd, Glasgow G53 6AG',                    distance: '3901.2', available: true  },
-  ];
-
-  const allVisibleStores = showMoreLocations
-    ? [...serviceCentres, ...moreServiceCentres]
-    : serviceCentres;
+  // Service Centres Data (kept for reference / future multi-store expansion)
+  const serviceCentres = [SINGLE_STORE];
+  const moreServiceCentres = [];
+  const allVisibleStores = serviceCentres;
 
   const mobileNetworks = [
     'Mobile Network',
@@ -299,13 +301,12 @@ const RepairBookingFlow = () => {
 
                   {/* Dot */}
                   <div
-                    className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${
-                      isPast
+                    className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${isPast
                         ? 'bg-[#FF6534] ring-4 ring-orange-100'
                         : isActive
-                        ? 'bg-[#2B0A3D] ring-4 ring-[#E2EEF8]'
-                        : 'bg-[#2B0A3D]'
-                    }`}
+                          ? 'bg-[#2B0A3D] ring-4 ring-[#E2EEF8]'
+                          : 'bg-[#2B0A3D]'
+                      }`}
                   />
                 </div>
               );
@@ -355,7 +356,7 @@ const RepairBookingFlow = () => {
                   </span>
                 </button>
                 <p className="mt-4 text-xs sm:text-sm text-gray-700 font-medium text-center">
-                  Choose from one of our<br />38 nationwide locations.
+                  Drop your device in at<br />our service centre.
                 </p>
               </div>
 
@@ -430,11 +431,10 @@ const RepairBookingFlow = () => {
                   {allVisibleStores.map((store) => (
                     <div
                       key={store.id}
-                      className={`p-4 rounded-xl border transition-all ${
-                        selectedStore === store.id
+                      className={`p-4 rounded-xl border transition-all ${selectedStore === store.id
                           ? 'border-[#FF6534] bg-orange-50/30'
                           : 'border-gray-200/80 bg-white'
-                      }`}
+                        }`}
                     >
                       <h3 className="font-bold text-gray-900 text-sm">
                         {store.name} –{' '}
@@ -513,7 +513,7 @@ const RepairBookingFlow = () => {
                       <g key={i} className="cursor-pointer" onClick={() => setSelectedStore(pin.label)}>
                         <circle cx={pin.x} cy={pin.y} r="10" fill="#FF6534" opacity="0.4" />
                         <circle cx={pin.x} cy={pin.y} r="8" fill="#FF6534" />
-                        <path d={`M${pin.x-4} ${pin.y-4} L${pin.x+4} ${pin.y+4} M${pin.x+4} ${pin.y-4} L${pin.x-4} ${pin.y+4}`} stroke="white" strokeWidth="2" strokeLinecap="round" />
+                        <path d={`M${pin.x - 4} ${pin.y - 4} L${pin.x + 4} ${pin.y + 4} M${pin.x + 4} ${pin.y - 4} L${pin.x - 4} ${pin.y + 4}`} stroke="white" strokeWidth="2" strokeLinecap="round" />
                       </g>
                     ))}
                   </svg>
@@ -600,13 +600,12 @@ const RepairBookingFlow = () => {
                         type="button"
                         disabled={isPast}
                         onClick={() => { setSelectedDate(day); setSelectedTime(null); }}
-                        className={`h-8 w-8 mx-auto rounded-full text-xs font-semibold transition-all cursor-pointer ${
-                          isSelected
+                        className={`h-8 w-8 mx-auto rounded-full text-xs font-semibold transition-all cursor-pointer ${isSelected
                             ? 'bg-[#2B0A3D] text-white font-extrabold'
                             : isPast
-                            ? 'text-gray-300 cursor-not-allowed'
-                            : 'text-gray-800 hover:bg-[#FF6534]/10 hover:text-[#FF6534]'
-                        }`}
+                              ? 'text-gray-300 cursor-not-allowed'
+                              : 'text-gray-800 hover:bg-[#FF6534]/10 hover:text-[#FF6534]'
+                          }`}
                       >
                         {day}
                       </button>
@@ -629,11 +628,10 @@ const RepairBookingFlow = () => {
                           key={slot}
                           type="button"
                           onClick={() => setSelectedTime(slot)}
-                          className={`py-2 px-1 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
-                            isChosen
+                          className={`py-2 px-1 rounded-xl text-xs font-bold border transition-all cursor-pointer ${isChosen
                               ? 'bg-[#2B0A3D] text-white border-[#2B0A3D]'
                               : 'bg-white text-gray-700 border-gray-200 hover:border-[#FF6534] hover:text-[#FF6534]'
-                          }`}
+                            }`}
                         >
                           {slot}
                         </button>

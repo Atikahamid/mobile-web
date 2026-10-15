@@ -34,7 +34,7 @@ import OrdersPage from '../admin/pages/OrdersPage';
 import PaymentsPage from '../admin/pages/PaymentsPage';
 import DiscountsPage from '../admin/pages/DiscountsPage';
 import BookingsPage from '../admin/pages/BookingsPage';
-import StoresPage from '../admin/pages/StoresPage';
+
 import CmsPagesPage from '../admin/pages/CmsPagesPage';
 import HeroSlidesPage from '../admin/pages/HeroSlidesPage';
 import ReviewsPage from '../admin/pages/ReviewsPage';
@@ -154,7 +154,7 @@ const AppRoutes = () => {
         <Route path="payments" element={<PaymentsPage />} />
         <Route path="discounts" element={<DiscountsPage />} />
         <Route path="bookings" element={<BookingsPage />} />
-        <Route path="stores" element={<StoresPage />} />
+
         <Route path="cms-pages" element={<CmsPagesPage />} />
         <Route path="hero-slides" element={<HeroSlidesPage />} />
         <Route path="reviews" element={<ReviewsPage />} />

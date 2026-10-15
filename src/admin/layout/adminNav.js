@@ -9,7 +9,7 @@ import {
   CalendarCheck,
   Package,
   CreditCard,
-  Store,
+
   TicketPercent,
   Star,
   HelpCircle,
@@ -55,7 +55,6 @@ export const adminNavSections = [
     title: 'Bookings',
     items: [
       { label: 'Repair Bookings', path: '/admin/bookings', icon: CalendarCheck },
-      { label: 'Stores', path: '/admin/stores', icon: Store },
     ],
   },
   {

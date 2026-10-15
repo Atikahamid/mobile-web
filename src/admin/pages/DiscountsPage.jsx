@@ -17,7 +17,7 @@ const DiscountsPage = () => (
         key: 'code',
         label: 'Code',
         render: (r) => (
-          <span className="font-mono font-bold text-[#FF6534]">{r.code}</span>
+          <span className="font-mono font-bold text-[#b8370e]">{r.code}</span>
         ),
       },
       {

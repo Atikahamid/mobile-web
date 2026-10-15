@@ -14,7 +14,7 @@ const STYLES = {
   initiated: 'bg-amber-100 text-amber-800',
   active: 'bg-emerald-100 text-emerald-800',
   inactive: 'bg-slate-100 text-slate-600',
-  admin: 'bg-[#FF6534]/15 text-[#FF6534]',
+  admin: 'bg-[#b8370e]/15 text-[#b8370e]',
   staff: 'bg-purple-100 text-purple-800',
   customer: 'bg-slate-100 text-slate-700',
 };

@@ -43,10 +43,10 @@ const AdminLogin = () => {
 
       <div className="relative w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FF6534] text-white shadow-lg shadow-[#FF6534]/30 mb-4">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#b8370e] text-white shadow-lg shadow-[#b8370e]/30 mb-4">
             <Wrench className="w-7 h-7" strokeWidth={2.5} />
           </div>
-          <h1 className="text-3xl font-black text-[#FF6534] tracking-tight">SAMZ Admin</h1>
+          <h1 className="text-3xl font-black text-[#b8370e] tracking-tight">SAMZ Admin</h1>
           <p className="mt-2 text-sm font-medium text-gray-500">
             Device Repair & E-commerce console
           </p>
@@ -68,7 +68,7 @@ const AdminLogin = () => {
                 autoComplete="username"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm font-medium text-[#1F1B2E] focus:outline-none focus:ring-2 focus:ring-[#FF6534]/30 focus:border-[#FF6534]"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm font-medium text-[#1F1B2E] focus:outline-none focus:ring-2 focus:ring-[#b8370e]/30 focus:border-[#b8370e]"
                 placeholder="admin@samz.com"
                 required
               />
@@ -87,7 +87,7 @@ const AdminLogin = () => {
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm font-medium text-[#1F1B2E] focus:outline-none focus:ring-2 focus:ring-[#FF6534]/30 focus:border-[#FF6534]"
+                className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm font-medium text-[#1F1B2E] focus:outline-none focus:ring-2 focus:ring-[#b8370e]/30 focus:border-[#b8370e]"
                 placeholder="••••••••"
                 required
               />
@@ -109,7 +109,7 @@ const AdminLogin = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl bg-[#FF6534] hover:bg-[#e05020] disabled:opacity-60 text-white font-bold text-sm shadow-sm transition-colors cursor-pointer"
+            className="w-full py-3 rounded-xl bg-[#b8370e] hover:bg-[#962d0b] disabled:opacity-60 text-white font-bold text-sm shadow-sm transition-colors cursor-pointer"
           >
             {loading ? 'Signing in…' : 'Sign in to Dashboard'}
           </button>
@@ -120,7 +120,7 @@ const AdminLogin = () => {
         </form>
 
         <p className="mt-6 text-center text-sm font-medium text-gray-500">
-          <Link to="/" className="text-[#FF6534] font-bold hover:underline">
+          <Link to="/" className="text-[#b8370e] font-bold hover:underline">
             ← Back to storefront
           </Link>
         </p>

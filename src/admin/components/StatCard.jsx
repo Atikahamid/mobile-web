@@ -5,7 +5,7 @@ const StatCard = ({ title, value, subtitle, icon: Icon, accent = false }) => {
     <div
       className={`rounded-2xl border p-5 shadow-sm transition-shadow hover:shadow-md ${
         accent
-          ? 'bg-[#FF6534] border-[#FF6534] text-white'
+          ? 'bg-[#b8370e] border-[#b8370e] text-white'
           : 'bg-white border-gray-100 text-[#1F1B2E]'
       }`}
     >
@@ -24,7 +24,7 @@ const StatCard = ({ title, value, subtitle, icon: Icon, accent = false }) => {
         {Icon && (
           <div
             className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${
-              accent ? 'bg-white/20' : 'bg-[#FF6534]/10 text-[#FF6534]'
+              accent ? 'bg-white/20' : 'bg-[#b8370e]/10 text-[#b8370e]'
             }`}
           >
             <Icon className="w-5 h-5" />

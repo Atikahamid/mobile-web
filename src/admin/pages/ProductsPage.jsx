@@ -25,7 +25,7 @@ const ProductsPage = () => (
         label: 'Price',
         render: (r) => (
           <span>
-            <span className="font-bold text-[#FF6534]">£{r.price}</span>
+            <span className="font-bold text-[#b8370e]">£{r.price}</span>
             <span className="text-gray-400 line-through ml-1.5 text-xs">£{r.originalPrice}</span>
           </span>
         ),

@@ -41,7 +41,7 @@ const AdminLayout = () => {
               title="Notifications"
             >
               <Bell className="w-5 h-5 text-[#1C0D2A]" />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#FF6534]" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#b8370e]" />
             </button>
 
             <div className="hidden sm:flex flex-col items-end mr-1">
@@ -49,7 +49,7 @@ const AdminLayout = () => {
               <span className="text-[11px] font-medium text-gray-500">{admin?.email}</span>
             </div>
 
-            <div className="w-9 h-9 rounded-full bg-[#FF6534] text-white flex items-center justify-center font-black text-sm">
+            <div className="w-9 h-9 rounded-full bg-[#b8370e] text-white flex items-center justify-center font-black text-sm">
               {(admin?.name || 'A').charAt(0)}
             </div>
 
@@ -70,7 +70,7 @@ const AdminLayout = () => {
 
         <footer className="px-6 py-4 text-center text-xs font-medium text-gray-400 border-t border-gray-100 bg-white">
           SAMZ Admin Panel · Static demo ·{' '}
-          <Link to="/" className="text-[#FF6534] hover:underline font-bold">
+          <Link to="/" className="text-[#b8370e] hover:underline font-bold">
             Back to website
           </Link>
         </footer>

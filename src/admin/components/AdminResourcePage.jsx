@@ -45,7 +45,7 @@ const AdminResourcePage = ({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={searchPlaceholder}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-medium text-[#1F1B2E] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6534]/30 focus:border-[#FF6534]"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-medium text-[#1F1B2E] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b8370e]/30 focus:border-[#b8370e]"
           />
         </div>
       )}
