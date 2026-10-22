@@ -6,8 +6,8 @@ import { useAdminAuth } from '../context/AdminAuthContext';
 const AdminLogin = () => {
   const { isAdminAuthenticated, login } = useAdminAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('admin@samz.com');
-  const [password, setPassword] = useState('admin123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -115,7 +115,7 @@ const AdminLogin = () => {
           </button>
 
           <p className="text-center text-xs font-medium text-gray-400">
-            Demo: any email + password (6+ characters)
+            Use your SAMZ admin credentials to sign in.
           </p>
         </form>
 

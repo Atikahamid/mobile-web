@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
+import { useDiscountValidation, usePlaceOrder } from '../../hooks/useOrders';
 import PayPalModal from '../../components/Checkout/PayPalModal';
 import './CheckoutPage.css';
 
@@ -74,6 +75,11 @@ const CheckoutPage = () => {
   const [appliedDiscount, setAppliedDiscount] = useState(0);
   const [discountError, setDiscountError] = useState('');
   const [discountSuccess, setDiscountSuccess] = useState('');
+
+  // Backend discount validation hook
+  const { validate: validateDiscountApi } = useDiscountValidation();
+  // Backend order placement hook (for future full wiring)
+  const { placeOrder } = usePlaceOrder();
 
   // Checkout workflow state: 'details' (Image 1 & 2) -> 'review' (Image 3) -> 'success'
   const [checkoutStep, setCheckoutStep] = useState('details');
@@ -230,8 +236,8 @@ const CheckoutPage = () => {
     setIsSubmitting(false);
   };
 
-  // Handle Discount Code
-  const handleApplyDiscount = (e) => {
+  // Handle Discount Code – tries backend first, falls back to static demo codes
+  const handleApplyDiscount = async (e) => {
     e.preventDefault();
     setDiscountError('');
     setDiscountSuccess('');
@@ -242,6 +248,25 @@ const CheckoutPage = () => {
       return;
     }
 
+    // Try backend validation first
+    try {
+      const result = await validateDiscountApi({ code, orderTotal: subtotal });
+      if (result?.valid && result?.discount) {
+        const disc = result.discount;
+        const discountVal = disc.type === 'percentage'
+          ? (subtotal * disc.value) / 100
+          : disc.value;
+        setAppliedDiscount(discountVal);
+        setDiscountSuccess(`Discount applied: -£${discountVal.toFixed(2)}`);
+        return;
+      } else {
+        // Backend said invalid; fall through to static demo check
+      }
+    } catch (_err) {
+      // Backend unavailable – fall through to static demo codes
+    }
+
+    // Static fallback demo codes
     if (code === 'SAMZ10' || code === 'SAVE10' || code === 'DISCOUNT') {
       const discountVal = subtotal * 0.1;
       setAppliedDiscount(discountVal);

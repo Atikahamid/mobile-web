@@ -26,7 +26,7 @@ const AdminTable = ({ columns, rows, onEdit, onDelete, onView }) => {
             ) : (
               rows.map((row, idx) => (
                 <tr
-                  key={row.id ?? idx}
+                  key={row._id ?? row.id ?? idx}
                   className={`border-t border-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFC]'} hover:bg-[#b8370e]/5 transition-colors`}
                 >
                   {columns.map((col) => (

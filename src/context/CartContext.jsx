@@ -6,19 +6,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     try {
       const saved = localStorage.getItem('SAMZ_cart_items');
-      return saved ? JSON.parse(saved) : [
-        // Pre-populate with default product matching picture for instant demo if empty
-        {
-          id: 'iphone-13-blue-128GB-Fair+',
-          productId: 'iphone-13',
-          name: 'iPhone 13',
-          color: { name: 'Blue', hex: '#2D5C7F', phoneBg: '#255273', screenGradient: 'from-blue-900 via-teal-800 to-indigo-950' },
-          capacity: '128GB',
-          condition: { condition: 'Fair+', price: 249 },
-          unitPrice: 249,
-          quantity: 2,
-        }
-      ];
+      return saved ? JSON.parse(saved) : [];
     } catch (e) {
       return [];
     }

@@ -54,7 +54,7 @@ const DeviceGraphic = ({ imageType, name }) => {
 
 const RefurbishedCard = ({ product }) => {
   const navigate = useNavigate();
-  const productPath = `/collections/refurbished/${product.id}`;
+  const productPath = `/collections/refurbished/${product.slug || product.id}`;
 
   const handleCardNavigation = () => {
     navigate(productPath);
@@ -106,7 +106,7 @@ const RefurbishedCard = ({ product }) => {
           <div className="min-w-0">
             {/* Color Swatches */}
             <div className="flex items-center space-x-2 mb-2.5">
-              {product.colors.map((color, idx) => (
+              {(product.colors || []).map((color, idx) => (
                 <span
                   key={idx}
                   title={color.name}
@@ -118,7 +118,7 @@ const RefurbishedCard = ({ product }) => {
 
             {/* Capacities */}
             <p className="text-2xs font-semibold text-gray-600 tracking-tight">
-              {product.capacities.join(', ')}
+              {(product.capacities || []).join(', ')}
             </p>
           </div>
 

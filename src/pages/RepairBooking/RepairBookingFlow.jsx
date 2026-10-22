@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -10,6 +10,8 @@ import {
   Maximize2
 } from 'lucide-react';
 import './RepairBookingFlow.css';
+import { useCurrentStore } from '../../hooks/useStore';
+import { useCreateBooking } from '../../hooks/useBookings';
 
 const RepairBookingFlow = () => {
   const location = useLocation();
@@ -195,7 +197,34 @@ const RepairBookingFlow = () => {
   };
 
   // Continue from Confirm Details to Confirm Purchase
-  const handleContinueToCart = () => {
+  // Also submit the booking to the backend
+  const handleContinueToCart = async () => {
+    // Build booking payload for backend
+    try {
+      const appointmentDate = selectedDate && calYear && calMonth !== null
+        ? `${calYear}-${String(calMonth + 1).padStart(2, '0')}-${String(selectedDate).padStart(2, '0')}`
+        : undefined;
+
+      await submitBooking({
+        repairId: repairInfo?.id ?? repairInfo?._id ?? undefined,
+        modelSlug: location.state?.device?.toLowerCase().replace(/\s+/g, '-') ?? undefined,
+        method: selectedMethod,
+        appointmentDate,
+        appointmentTime: selectedTime ?? undefined,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        postcode: formData.postcode,
+        devicePasscode: formData.devicePasscode,
+        mobileNetwork: formData.mobileNetwork !== 'Mobile Network' ? formData.mobileNetwork : undefined,
+        additionalInfo: formData.additionalInfo,
+        sendOffers: formData.sendOffers,
+      });
+    } catch (err) {
+      // Non-blocking: still proceed to confirm-purchase screen even if booking API fails
+      console.warn('Booking API error (proceeding anyway):', err?.message);
+    }
     setCurrentStep('confirm-purchase');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -227,16 +256,32 @@ const RepairBookingFlow = () => {
 
   const cartTotal = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  // ── Single store (only one location – no need to choose) ──────────────────
-  const SINGLE_STORE = {
-    id: 'main-store',
-    name: 'SAMZ Service Centre',
-    address: '123 High Street, London EC1A 1BB',
-    distance: '0.0',
-    available: true,
-  };
+  // ── Backend: single store & booking API ───────────────────────────────────
+  const { store: backendStore } = useCurrentStore();
+  const { submitBooking, loading: bookingLoading, error: bookingError } = useCreateBooking();
 
-  // Service Centres Data (kept for reference / future multi-store expansion)
+  // ── Single store (falls back to static if API not ready) ──────────────────
+  const SINGLE_STORE = backendStore
+    ? {
+        id: backendStore._id ?? 'main-store',
+        name: backendStore.name ?? 'SAMZ Service Centre',
+        address: [
+          backendStore.address?.street,
+          backendStore.address?.city,
+          backendStore.address?.postcode,
+        ].filter(Boolean).join(', ') || backendStore.address || '123 High Street, London EC1A 1BB',
+        distance: '0.0',
+        available: true,
+      }
+    : {
+        id: 'main-store',
+        name: 'SAMZ Service Centre',
+        address: '123 High Street, London EC1A 1BB',
+        distance: '0.0',
+        available: true,
+      };
+
+  // Service Centres Data (single-store only)
   const serviceCentres = [SINGLE_STORE];
   const moreServiceCentres = [];
   const allVisibleStores = serviceCentres;
